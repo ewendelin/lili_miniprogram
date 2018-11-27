@@ -2,12 +2,13 @@
   "pages":[
     "pages/index/index",
     "pages/show/show",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/landing/landing"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#FF8616",
+    "navigationBarTitleText": "粒粒 | Lili",
+    "navigationBarTextStyle":"#FFF"
   }
 }

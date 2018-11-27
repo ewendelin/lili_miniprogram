@@ -49,8 +49,13 @@
 					"name": "index",
 					"pathName": "pages/index/index",
 					"query": ""
+        },
+				{
+					"id": -1,
+					"name": "LandingPage",
+					"pathName": "pages/landing/landing"
+
 				}
-			]
 		}
 	}
 }
