@@ -76,7 +76,7 @@
       </view>
 
     <view class="card-category">
-      ${{item.price}}
+      {{item.price}}
     </view>
 
     </view>
