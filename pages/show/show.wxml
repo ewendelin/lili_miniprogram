@@ -1,5 +1,5 @@
 <!--pages/show/show.wxml-->
-<image class="food" src="/images/food.png"></image>
+<image class="food" src="/images/pie1.png"></image>
 <view class="product-name">{{productname}}</view>
 <view class="flexbox">
   <view class="discount">{{discount}}</view>
