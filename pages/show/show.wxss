@@ -3,13 +3,14 @@
   display:flex;
 }
 .clock{
-  height:30px;
-  width:30px;
+  height:20px;
+  width:20px;
+  margin: auto 0;
 }
 
 .calender{
-  height:30px;
-  width:30px;
+  height:20px;
+  width:20px;
 }
 
 .food{
@@ -23,12 +24,82 @@
 }
 
 .restaurant-avatar {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   margin: 10px;
 }
 
 .restaurant-rating {
   width: 60px;
   height: 10px;
+}
+
+.product-description {
+  margin-bottom: 30px;
+}
+
+#myMap {
+  width: 150px;
+  height: 80px;
+  border: #C4C4C4 1px solid;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-weight: bolder;
+}
+
+.discription {
+  font-size: 18px;
+}
+
+.product-description {
+  margin: 25px;
+}
+
+.flexbox-time {
+  display: flex;
+  justify-content:space-between;
+  margin: 25px;
+}
+
+.time-table{
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.restaurant-card {
+  display: flex;
+  justify-content:space-between;
+  padding: 10px;
+}
+
+.restaurant-avatars {
+  margin: auto 0;
+}
+
+.restaurant-review {
+  margin: auto 0;
+}
+
+.restaurant-name {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.restaurant-cuisine {
+ font-size: 14px;
+}
+
+.restaurant-address {
+  font-size: 14px;
+}
+
+.restaurant-rating{
+  height: 20px;
+  width: 80px;
+}
+
+.restaurant-info {
+  margin: auto 0;
 }

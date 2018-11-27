@@ -7,8 +7,8 @@ Page({
   data: {
     description: "The basis of Dutch apple pie is a crust on the bottom and around the edges.",
     productname: "Apple pie",
-    discount:"40yuan",
-    oldprice:"30yuan",
+    discount:"$40",
+    oldprice:"$30",
     latitude: 23.099994,
     longitude: 113.324520,
     starttime:"10:00",

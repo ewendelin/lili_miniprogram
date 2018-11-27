@@ -1,19 +1,15 @@
 <!--pages/show/show.wxml-->
-<image class="food" src="/images/pie1.png"></image>
-<view class="product-name">{{productname}}</view>
-<view class="flexbox">
+<image class="food" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=668&q=80"></image>
+<view class="product-description">
+  <view class="product-name">{{productname}}</view>
   <view class="discount">{{discount}}</view>
-  <view class="old-price">{{oldprice}}</view>
+  <view class="discription">{{description}}</view>
 </view>
-<view class="discription">{{description}}</view>
-<view></view>
-<view></view>
-<view></view>
 
-<view class="flexbox">
+<view class="flexbox-time">
   <view class="left-content">
     <view class="flexbox">
-      <image class="clock" src="/images/clock.png"></image>
+      <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg"></image>
       <view class="time">
           <view class="time-table">Starting time:{{starttime}}
           </view>
@@ -22,7 +18,7 @@
     </view>
   </view>
     <view class="flexbox">
-      <image class="calender" src="/images/calender.png"></image>
+      <image class="calender" src="https://image.flaticon.com/icons/svg/61/61469.svg"></image>
       <view class="time-table">Provides {{everyday}}</view>
     </view>
 </view>
@@ -39,10 +35,16 @@
 </view>
 
 <view class="restaurant-card">
+ <view class="restaurant-avatars">
   <image class="restaurant-avatar" src="/images/avatar.png"></image>
-  <view class="restaurant-name">{{restaurantname}}</view>
-  <view class="restaurant-cuisine">{{restaurantcuisine}}</view>
-  <view class="restaurant-address">{{restaurantaddress}}</view>
-  <image class="restaurant-rating">{{restaurantrating}} src="/images/rating.png"
-  </image>
+  </view>
+  <view class="restaurant-info">
+    <view class="restaurant-name">{{restaurantname}}</view>
+    <view class="restaurant-cuisine">{{restaurantcuisine}}</view>
+    <view class="restaurant-address">{{restaurantaddress}}</view>
+  </view>
+  <view class="restaurant-review">
+    <image class="restaurant-rating" src="/images/rating.png">{{restaurantrating}}
+    </image>
+  </view>
 </view>
