@@ -1,0 +1,33 @@
+/* pages/restaurant/restaurant.wxss */
+.respic {
+  width: 100vw;
+}
+.restaurant {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-name {
+  position: absolute; 
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.starrate{
+  position: absolute;
+  width: 30vw;
+  height: 20px;
+  margin-top: 45px;
+}
+.restaurant-cuisine {
+  position: absolute;
+  font-weight: light;
+  font-size: 12px;
+  margin-top: 65px;
+}
+.restaurant-description {
+  position: relative;
+  font-size: 10px;
+  
+}

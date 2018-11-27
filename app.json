@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/show/show",
     "pages/logs/logs",
-    "pages/landing/landing"
+    "pages/landing/landing",
+    "pages/restaurant/restaurant"
   ],
   "window":{
     "backgroundTextStyle":"light",

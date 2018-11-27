@@ -1,0 +1,11 @@
+
+<image class="respic" src="https://media-cdn.tripadvisor.com/media/photo-s/12/4e/66/95/rac.jpg">
+</image>
+<view class="restaurant">
+  <text class="restaurant-name">Rac</text>
+  <image class="starrate" src="/images/rating.png"></image> 
+  <text class="restaurant-cuisine">French, Crêpe</text> 
+  <view class="restaurant-description"></view>
+</view>
+
+  <!-- <text class="restaurant-cuisine">French, Crêpe</text>  -->
