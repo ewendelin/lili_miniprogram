@@ -106,7 +106,7 @@
 }
 
 .card {
-  height: 120px;
+  height: 150px;
   width: 85vw;
   /* text-shadow: 0 1px 1px rgba(0,0,0,0.6); */
   background-size: cover !important;
@@ -127,11 +127,12 @@
 }
 .card-description {
   position: absolute; 
-  bottom: 50px;
+  top: 60px;
   left: 10px;
 }
 .card-description .name {
   font-size: 24px;
+  font-weight: bold;
 }
 .card-description .tag {
   font-size: 14px;
@@ -149,9 +150,7 @@
 }
 
 .bottom-avatar {
- position: absolute;
- right: 10px;
- top: 90px;
+
  width: 40px;
  height: 40px;
  border-radius: 50%;
@@ -162,3 +161,14 @@
   height: 40px;
   border-radius: 50%;
 }
+
+.buy-button{
+  position: absolute;
+ right: 10px;
+ top: 120px;
+}
+
+ .buy-buttons {
+     width: 40px;
+  height: 40px;
+ }

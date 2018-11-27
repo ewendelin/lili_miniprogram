@@ -1,5 +1,5 @@
 {
-	"description": "Project configuration file",
+	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
 	},
@@ -17,7 +17,7 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -32,30 +32,17 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
-					"name": "show",
-					"pathName": "pages/show/show",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "index",
-					"pathName": "pages/index/index",
-					"query": ""
-        },
-				{
-					"id": -1,
-					"name": "LandingPage",
+					"name": "landing",
 					"pathName": "pages/landing/landing"
-
 				}
+			]
 		}
 	}
 }
