@@ -1,0 +1,34 @@
+/* pages/show/show.wxss */
+.flexbox{
+  display:flex;
+}
+.clock{
+  height:30px;
+  width:30px;
+}
+
+.calender{
+  height:30px;
+  width:30px;
+}
+
+.food{
+  width: 100%;
+}
+
+.restaurant-card{
+  border:#E5E5E5 solid 1px;
+  margin: 20px;
+
+}
+
+.restaurant-avatar {
+  width: 65px;
+  height: 65px;
+  margin: 10px;
+}
+
+.restaurant-rating {
+  width: 60px;
+  height: 10px;
+}

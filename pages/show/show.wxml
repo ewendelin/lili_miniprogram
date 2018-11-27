@@ -1,0 +1,48 @@
+<!--pages/show/show.wxml-->
+<image class="food" src="/images/food.png"></image>
+<view class="product-name">{{productname}}</view>
+<view class="flexbox">
+  <view class="discount">{{discount}}</view>
+  <view class="old-price">{{oldprice}}</view>
+</view>
+<view class="discription">{{description}}</view>
+<view></view>
+<view></view>
+<view></view>
+
+<view class="flexbox">
+  <view class="left-content">
+    <view class="flexbox">
+      <image class="clock" src="/images/clock.png"></image>
+      <view class="time">
+          <view class="time-table">Starting time:{{starttime}}
+          </view>
+          <view class="time-table">Closing time:{{endtime}}
+    </view>
+    </view>
+  </view>
+    <view class="flexbox">
+      <image class="calender" src="/images/calender.png"></image>
+      <view class="time-table">Provides {{everyday}}</view>
+    </view>
+</view>
+<!-- style="width: 20%; height: 100px;" -->
+  <view class="right-content">
+    <map id="myMap"
+          latitude="{{latitude}}"
+          longitude="{{longitude}}"
+          markers="{{markers}}"
+          covers="{{covers}}"
+          show-location>
+    </map>
+  </view>
+</view>
+
+<view class="restaurant-card">
+  <image class="restaurant-avatar" src="/images/avatar.png"></image>
+  <view class="restaurant-name">{{restaurantname}}</view>
+  <view class="restaurant-cuisine">{{restaurantcuisine}}</view>
+  <view class="restaurant-address">{{restaurantaddress}}</view>
+  <image class="restaurant-rating">{{restaurantrating}} src="/images/rating.png"
+  </image>
+</view>
