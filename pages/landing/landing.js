@@ -76,8 +76,27 @@ Page({
       {
         name: "Pumpkin Pie",
         distance: "100m",
-        price: "10 RMB"
-      }
+        price: "10 RMB",
+        image: "/images/pie1.jpg"
+      },
+      {
+        name: "Apple Pie",
+        distance: "80m",
+        price: "25 RMB",
+        image: "/images/pie2.jpg"
+      },
+      {
+        name: "Mango Pie",
+        distance: "120m",
+        price: "30 RMB",
+        image: "/images/pie3.jpg"
+      },
+      {
+        name: "Banana Pie",
+        distance: "140m",
+        price: "35 RMB",
+        image: "/images/pie4.jpg"
+      },
     ]
   },
   
