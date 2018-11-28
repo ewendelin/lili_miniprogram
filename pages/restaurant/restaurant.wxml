@@ -32,9 +32,9 @@
     </map>
   </view>
 </view>
-<!-- <view class="reviews">
+<view class="reviews">
   <view class="review-title">
     Reviews
   </view>
   <view class="create-review-btn" bindtap="createReview">Add a Review</view>
-</view> -->
+</view>

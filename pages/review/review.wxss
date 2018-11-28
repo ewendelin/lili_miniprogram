@@ -33,6 +33,7 @@
 }
 
 .rating {
+  border: 1px solid rgb(230,230,230);
   font-size: 25x;
   text-align: center;
   color: grey;
@@ -43,7 +44,7 @@
   color: #f8b500;
   font-size: 25px;
   font-weight: bolder;
-  border: .5px solid rgb(230,230,230);
+  border: 1px solid rgb(230,230,230);
   padding: 0px;
   text-align: center;
 }
