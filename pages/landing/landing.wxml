@@ -1,8 +1,8 @@
 <view class="page">
-    <view class="page__hd">
+    <!-- <view class="page__hd"> -->
         <!-- <view class="page__title">SearchBar</view>
         <view class="page__desc">搜索栏</view> -->
-    </view>
+    <!-- </view>
     <view class="page__bd">
         <view class="weui-search-bar">
             <view class="weui-search-bar__form">
@@ -42,7 +42,7 @@
                 </view>
             </navigator>
         </view>
-    </view>
+    </view> --> 
     <view>
       <map 
       id="myMap" 
@@ -59,13 +59,11 @@
     <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
 
     <view class = "cards-menu">
-  <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{ item.image }}');" data-item="{{item}}">
-
-    <view class="top-avatar">
-      <image class="top-avatars" src="/images/avata-dog.png"></image>
-      
-    </view>
-
+      <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{ item.image }}');" data-item="{{item}}">
+        <view class="top-avatar">
+        <image class="top-avatars" src="/images/avata-dog.png">
+        </image>
+      </view>
     <view class="card-description">
       <view class="name">
         {{item.name}}

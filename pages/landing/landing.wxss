@@ -1,4 +1,4 @@
-.weui-search-bar {
+/* .weui-search-bar {
     position: relative;
     padding: 8px 10px;
     display: flex;
@@ -71,7 +71,7 @@
 .map-icon {
   height: 25px;
   width: 25px;
-}
+} */
 
 .show-map-btn {
   margin: 10px;

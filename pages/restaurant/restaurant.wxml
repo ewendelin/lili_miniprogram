@@ -1,0 +1,40 @@
+<image class="respic" src="https://media-cdn.tripadvisor.com/media/photo-s/12/4e/66/95/rac.jpg">
+</image>
+<view class="restaurant-container">
+  <view class="restaurant-name">
+    Rac {{restaurant.name}}
+  </view> 
+  <view class="star-rating">
+    <view class="{{restaurant.rating}}">
+    *****
+    </view>
+  </view>
+  <view class="restaurant-cuisine">
+    French {{restaurant.cuisine}}
+  </view> 
+  <view class="restaurant-description">
+    This is a great little text about why the restaurant joined our platform. 
+    {{restaurant.description}}
+  </view>
+   <view class="restaurant-address">
+    Address: Anfu Lu{{restaurant.address}}
+  </view>
+</view> 
+<view class="find-on-map">
+  <view class="map-card">
+    <map 
+      id="myMap" 
+      latitude="{{latitude}}" 
+      longitude="{{longitude}}" 
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location> 
+    </map>
+  </view>
+</view>
+<view class="reviews">
+  <view class="review-title">
+    Reviews
+  </view>
+  <view class="create-review-btn" bindtap="createReview">Add a Review</view>
+</view>

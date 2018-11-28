@@ -1,0 +1,96 @@
+/* pages/restaurant/restaurant.wxss */
+.respic {
+  width: 100vw;
+}
+.restaurant-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-name {
+  width: 80vw;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.star-rating {
+width: 80vw;
+margin-bottom: 3px;
+}
+.restaurant-cuisine {
+  width: 80vw;
+  font-size: 14px;
+  color: #616161;
+  margin-bottom: 3px;
+}
+.restaurant-description {
+  width: 80vw;
+  font-size: 14px;
+  margin-bottom: 3px;
+  font-style: italic;
+}
+.restaurant-address {
+  width: 80vw;
+  font-size: 14px;
+}
+.find-on-map {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.map-card {
+  height: 140px;
+  width: 80vw;
+  /* text-shadow: 0 1px 1px rgba(0,0,0,0.6); */
+  border-radius: 4px;
+  /* border: .5px solid lightgray; */
+  margin-bottom: 20px;
+}
+#myMap {
+  height: 100%;
+  width: 100%;
+}
+
+/* .map-card-btn {
+  width: 30vw;
+  height: 100%;
+
+} */
+.reviews {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.review-title {
+  width: 80vw;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.user-review-card {
+  width:80vw;
+  height: 
+}
+
+.create-review-btn {
+  margin: 10px;
+  width: 50vw;
+  height: 40px;
+  border: 1px solid rgb(150, 150, 150);
+  color: rgb(150, 150, 150);
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: light;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
