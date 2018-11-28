@@ -48,3 +48,14 @@
     </image>
   </view>
 </view>
+
+<view class="review">
+ <view class="review-title">Reviews</view>
+ <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="review-box" data-item="{{item}}">
+   <view class="user-avatar"><image class="user-avatars" src="{{item.image}}"></image></view>
+   <view class="review-content">{{item.content}}</view>
+ </view>
+ <!-- <button class="review-load">Load more reviews</button> -->
+</view>
+
+<button class="weui-btn" type="primary">Claim it!</button>

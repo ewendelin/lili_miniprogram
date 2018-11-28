@@ -16,7 +16,17 @@ Page({
     everyday:"everyday",
     restaurantname:"Grandpa's memory",
     restaurantcuisine:"Dessert, Bakery & Pastries",
-    restaurantaddress:"Nanjing Xi Lu"
+    restaurantaddress:"Nanjing Xi Lu",
+       items: [
+      {
+        content: "aaa",
+        image: "/images/avata-dog.png"
+      },
+      {
+        content: "aaa",
+        image: "/images/avata-dog.png"
+      }
+    ]
   },
 
   /**
