@@ -4,7 +4,8 @@
     "pages/show/show",
     "pages/logs/logs",
     "pages/landing/landing",
-    "pages/restaurant/restaurant"
+    "pages/restaurant/restaurant",
+    "pages/review/review"
   ],
   "window":{
     "backgroundTextStyle":"light",

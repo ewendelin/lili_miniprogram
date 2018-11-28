@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -52,7 +52,13 @@
 				{
 					"id": -1,
 					"name": "Restaurant",
-					"pathName": "pages/restaurant/restaurant"
+					"pathName": "pages/restaurant/restaurant",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "Review",
+					"pathName": "pages/review/review"
 				}
 			]
 		}
