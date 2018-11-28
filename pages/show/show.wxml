@@ -1,40 +1,41 @@
 <!--pages/show/show.wxml-->
 <image class="food" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=668&q=80"></image>
-<view class="product-description">
-  <view class="product-name">{{productname}}</view>
-  <view class="discount">{{discount}}</view>
-  <view class="discription">{{description}}</view>
-</view>
 
-<view class="flexbox-time">
-  <view class="left-content">
-    <view class="flexbox">
-      <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg"></image>
-      <view class="time">
-          <view class="time-table">Starting time:{{starttime}}
-          </view>
-          <view class="time-table">Closing time:{{endtime}}
-    </view>
-    </view>
+<view class="product-container">
+  <view class="product-name">
+    {{productname}}
   </view>
-    <view class="flexbox">
-      <image class="calender" src="https://image.flaticon.com/icons/svg/61/61469.svg"></image>
-      <view class="time-table">Provides {{everyday}}</view>
+    <view class="product-price">
+      <text class="new-price">$10</text> 
+      <text class="old-price">$35</text>
     </view>
-</view>
-<!-- style="width: 20%; height: 100px;" -->
-  <view class="right-content">
-    <map id="myMap"
+    <view class="product-description">
+      {{description}}
+    </view>
+  <view class="flexbox">
+    <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg">
+    </image>
+      <view class="time">
+        <view class="time-table">Start: {{starttime}}</view>
+        <view class="time-table">End: {{endtime}}</view>
+      </view>
+      
+   
+    <!-- <view class="flexbox">
+      <view class="right-content">
+        <map id="myMap"
           latitude="{{latitude}}"
           longitude="{{longitude}}"
           markers="{{markers}}"
           covers="{{covers}}"
           show-location>
-    </map>
-  </view>
+        </map>
+      </view>  
+    </view>  -->
+  </view>   
 </view>
 
-<view class="restaurant-card" bindtap='jumpToRestaurant'>
+<!-- <view class="restaurant-card" bindtap='jumpToRestaurant'>
  <view class="restaurant-avatars">
   <image class="restaurant-avatar" src="/images/avatar.png"></image>
   </view>
@@ -47,7 +48,7 @@
     <image class="restaurant-rating" src="/images/rating.png">{{restaurantrating}}
     </image>
   </view>
-</view>
+</view> -->
 
 <!-- <view class="review">
  <view class="review-title">Reviews</view>
@@ -55,7 +56,7 @@
    <view class="user-avatar"><image class="user-avatars" src="{{item.image}}"></image></view>
    <view class="review-content">{{item.content}}</view>
  </view>
-</view> -->
+</view>  -->
 <!-- <button class="review-load">Load more reviews</button> -->
 
-<!-- <button class="weui-btn" type="primary">Claim it!</button> -->
+<button class="weui-btn" type="primary">Claim it!</button> 
