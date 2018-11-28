@@ -1,0 +1,20 @@
+.claim-food {
+  border-radius: 10px;
+}
+
+.claim-content {
+  font-size: 14px;
+}
+
+.claim-name {
+  font-weight: bold;
+}
+
+.weui-btn {
+  margin:30px;
+  width: 180px;
+}
+
+#claim-map {
+  margin-top: 20px;
+}
