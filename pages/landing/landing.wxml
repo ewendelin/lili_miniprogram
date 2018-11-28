@@ -80,7 +80,7 @@
     </view>
 
     <view class="buy-button">
-  <image class="buy-buttons" src="/images/buy.png"></image>
+  <!-- <image class="buy-buttons" src="/images/buy.png"></image> -->
     </view>
   </view>
 </view>

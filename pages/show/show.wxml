@@ -34,7 +34,7 @@
   </view>
 </view>
 
-<view class="restaurant-card">
+<view class="restaurant-card" bindtap='jumpToRestaurant'>
  <view class="restaurant-avatars">
   <image class="restaurant-avatar" src="/images/avatar.png"></image>
   </view>
@@ -49,13 +49,13 @@
   </view>
 </view>
 
-<view class="review">
+<!-- <view class="review">
  <view class="review-title">Reviews</view>
  <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="review-box" data-item="{{item}}">
    <view class="user-avatar"><image class="user-avatars" src="{{item.image}}"></image></view>
    <view class="review-content">{{item.content}}</view>
  </view>
- <!-- <button class="review-load">Load more reviews</button> -->
-</view>
+</view> -->
+<!-- <button class="review-load">Load more reviews</button> -->
 
-<button class="weui-btn" type="primary">Claim it!</button>
+<!-- <button class="weui-btn" type="primary">Claim it!</button> -->
