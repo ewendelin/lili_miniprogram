@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/landing/landing",
     "pages/restaurant/restaurant",
-    "pages/review/review"
+    "pages/review/review",
+    "pages/claim/claim"
   ],
   "window":{
     "backgroundTextStyle":"light",
