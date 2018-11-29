@@ -85,7 +85,7 @@
   border-radius: 5px;
 }
 
-.section {
+/* .section {
   margin-top: 20px;
   background:rgb(237, 234, 234);
   border-radius: 20px;
@@ -94,7 +94,7 @@
   text-align: center;
   margin-left: 35px;
   margin-bottom: 1px;
-}
+} */
 
 .cards-menu {
   align-items: center;
@@ -108,7 +108,6 @@
 .card {
   height: 150px;
   width: 85vw;
-  /* text-shadow: 0 1px 1px rgba(0,0,0,0.6); */
   background-size: cover !important;
   background-position: center;
   color: white;
@@ -119,9 +118,6 @@
 }
 
 .product-price {
-  /* position: absolute;
-  top: 10px;
-  left: 10px; */
   font-size: 15px;
   text-transform: uppercase;
 }
@@ -150,13 +146,4 @@
   font-size: 14px;
   opacity: 0.7;
   font-weight: bold;
-}
-
-.top-avatars {
- position: absolute;
- right: 10px;
- top: 8px;
- width: 40px;
- height: 40px;
- border-radius: 50%;
 }
