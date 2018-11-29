@@ -1,5 +1,5 @@
 /**index.wxss**/
-.userinfo {
+/* .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,4 +18,39 @@
 
 .usermotto {
   margin-top: 200px;
+} */
+
+/* pages/landing/landing.wxss */
+
+/* Banner Component */
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.teaser {
+  font-size: 16px;
+  font-weight: light;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+.margin {
+  margin-top: 20px;
+}
+
+.btn-start {
+  background-color: #FF8616;
+  color: #fff;
+}
+/* Banner Component */
