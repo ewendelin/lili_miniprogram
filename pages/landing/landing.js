@@ -65,6 +65,7 @@
 
 //   }
 // })
+const app = getApp()
 
 Page({
   data: {
@@ -72,14 +73,31 @@ Page({
     inputVal: "",
     showMap: true,
     showMapBtn: "Hide Map",
-    items: [
-      {
-        name: "Apple Pie",
-        distance: "100m",
-        price: "$ 40",
-        image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=668&q=80"
+    // items: [
+    //   {
+    //     name: "Apple Pie",
+    //     distance: "100m",
+    //     price: "$ 40",
+    //     image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=668&q=80"
+    //   }
+    // ]
+  },
+
+  getData() {
+    let page = this;
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts?access_token=${app.globalData.access_token}`,
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        console.log(res.data)
+        page.setData({
+          posts: res.data.posts
+        })
       }
-    ]
+    })
   },
   
   toggleMap: function() {
@@ -126,6 +144,10 @@ Page({
     this.setData({
       inputVal: e.detail.value
     });
+  },
+
+  onShow: function() {
+    this.getData();
   },
 
   onReady: function (e) {

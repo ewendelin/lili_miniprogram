@@ -55,12 +55,12 @@
       </view>
 
       <view class="card-category">
-        {{item.distance}}
+        {{item.original_price}}
       </view>
 
-    <view class="card-category">
-      {{item.price}}
-    </view>
+      <view class="card-category">
+        {{item.discount}}
+      </view>
 
     </view>
 

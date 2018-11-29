@@ -1,4 +1,6 @@
 // pages/restaurant/restaurant.js
+var app = getApp()
+
 Page({
 
   /**
@@ -8,6 +10,10 @@ Page({
     postRating: 3,
     showRatingModal: false,
     rating: [],
+  },
+
+  getData: function(post_id) {
+
   },
 
   userRating: function () {
