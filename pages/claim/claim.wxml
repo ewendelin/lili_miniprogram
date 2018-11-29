@@ -1,19 +1,25 @@
-<view class="container">
-<image class="claim-food" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=668&q=80"></image>
-<view class="claim-title">Congrates!</view>
-
-<view class="claim-content">
-You are making a claim for Apple pie from Grandpa’s memory
+<view class="claim-photo-container">
+  <image class="claim-food" src="{{claim.image}}"></image>
 </view>
+<view class="text-container">
+  <view class="claim-title">Yuuum!</view>
 
-<view class="claim-content">We recommand you go get it in the next 10 minutes.</view>
+  <view class="claim-content1">
+    You claimed {{claim.name}} from {{claim.restaurant}} at {{claim.claimed_at}}.
+  </view>
+
+  <view class="claim-content2">
+    You will be able to pick up your food from {{claim.start-time}} to {{claim.end-time}} 
+  </view>
 
     <map id="claim-map"
-          latitude="{{latitude}}"
-          longitude="{{longitude}}"
-          markers="{{markers}}"
-          covers="{{covers}}"
-          show-location>
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
+        covers="{{covers}}"
+        show-location>
     </map>
-     <button class="weui-btn" type="warn" data-itemid="{{item.id}}" bindtap="deleteItem" >cancel</button>
-    </view>
+     <button class="weui-btn" type="warn" data-itemid="{{item.id}}" bindtap="deleteItem">
+      Cancel
+    </button>
+</view>
