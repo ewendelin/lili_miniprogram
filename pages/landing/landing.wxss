@@ -85,7 +85,7 @@
   border-radius: 5px;
 }
 
-.section {
+/* .section {
   margin-top: 20px;
   background:rgb(237, 234, 234);
   border-radius: 20px;
@@ -94,7 +94,7 @@
   text-align: center;
   margin-left: 35px;
   margin-bottom: 1px;
-}
+} */
 
 .cards-menu {
   align-items: center;
@@ -108,34 +108,30 @@
 .card {
   height: 150px;
   width: 85vw;
-  /* text-shadow: 0 1px 1px rgba(0,0,0,0.6); */
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
   margin:7vw auto;
   border-radius: 3px;
-  box-shadow: 2px 2px #edeaea;
+  box-shadow: 1px 1px #edeaea;
 }
 
 .product-price {
-  /* position: absolute;
-  top: 10px;
-  left: 10px; */
   font-size: 15px;
   text-transform: uppercase;
 }
 .new-price {
   font-size: 16px;
   width: 80vw;
-  color: red;
+  color: #FF8616;
   margin-right: 15px;
 }
 .old-price {
   width: 80vw;
   font-size: 14px;
   text-decoration: line-through;
-  color: gray
+  color: white;
 }
 .card-description {
   position: absolute; 
@@ -143,7 +139,7 @@
   left: 15px;
 }
 .card-description .name {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 .card-description .tag {
@@ -151,36 +147,3 @@
   opacity: 0.7;
   font-weight: bold;
 }
-
-.top-avatars {
- position: absolute;
- right: 10px;
- top: 8px;
- width: 40px;
- height: 40px;
- border-radius: 50%;
-}
-
-.bottom-avatar {
-
- width: 40px;
- height: 40px;
- border-radius: 50%;
-}
-
-.bottom-avatars {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.buy-button{
-  position: absolute;
- right: 10px;
- top: 120px;
-}
-
- .buy-buttons {
-     width: 40px;
-  height: 40px;
- }
