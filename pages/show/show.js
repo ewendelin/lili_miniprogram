@@ -26,7 +26,9 @@ Page({
         restaurant: restaurant.name
       }
     };
-    let userId = wx.getStorageSync('userId')
+    // let userId = wx.getStorageSync('userId');
+    let userId = app.globalData.userId;
+    console.log(userId);
 
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims?user_id=${userId}`, //仅为示例，并非真实的接口地址,

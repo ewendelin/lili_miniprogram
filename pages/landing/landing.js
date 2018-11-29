@@ -75,7 +75,7 @@ Page({
   onLoad: function (options) {
     let page = this
     wx.request({
-      url: `${app.globalData.serverUrl}/api/v1/posts`,
+      url: `${app.globalData.serverUrl}api/v1/posts`,
       success: (res) => {
         const data = res.data;
         let posts = data.posts
