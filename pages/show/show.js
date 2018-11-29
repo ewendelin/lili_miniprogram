@@ -59,7 +59,7 @@ Page({
         let post = data.post
         console.log(post)
         post.start_time
-        post.new_price = post.original_price * post.discount.toFixed(1)
+        post.new_price = post.original_price * post.discount.toFixed(0)
         // Update local data
         page.setData({
           post: post,
