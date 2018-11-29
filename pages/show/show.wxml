@@ -16,8 +16,7 @@
     <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg">
     </image>
       <view class="time">
-        <view class="time-table">Start: {{starttime}}</view>
-        <view class="time-table">End: {{endtime}}</view>
+        <view class="time-table">Pickup between {{starttime}} - {{endtime}}</view>
       </view>
       
    
@@ -35,7 +34,7 @@
   </view>   
 </view>
 
-<!-- <view class="restaurant-card" bindtap='jumpToRestaurant'>
+<view class="restaurant-card" bindtap='jumpToRestaurant'>
  <view class="restaurant-avatars">
   <image class="restaurant-avatar" src="/images/avatar.png"></image>
   </view>
@@ -48,7 +47,7 @@
     <image class="restaurant-rating" src="/images/rating.png">{{restaurantrating}}
     </image>
   </view>
-</view> -->
+</view>
 
 <!-- <view class="review">
  <view class="review-title">Reviews</view>
@@ -59,4 +58,4 @@
 </view>  -->
 <!-- <button class="review-load">Load more reviews</button> -->
 
-<button class="weui-btn" type="primary">Claim it!</button> 
+<button class="weui-btn" type="primary" bindtap='jumpToClaim'>Claim it!</button> 
