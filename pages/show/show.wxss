@@ -1,10 +1,15 @@
 /* pages/show/show.wxss */
 .food {
-  width: 100vw;
   max-height: 300px;
-  background-size: cover !important;
-  background-position: center;
+  object-fit: cover;
 }
+
+.food-photo-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .product-container {
   display: flex;
   flex-direction: column;
@@ -35,7 +40,6 @@
   font-size: 16px;
   text-decoration: line-through;
   color: gray
-
 }
 
 .product-description {
@@ -53,33 +57,35 @@
 }
 
 .clock {
-  height:20px;
-  width:20px;
+  height:30px;
+  width:30px;
   margin-right: 25px;
 }
 
 .time-table{
-  font-size: 14px;
+  font-size: 12px;
 }
-.start-time {
-  
-}
-
-/* #myMap {
-  width: 150px;
-  height: 80px;
-  border: #C4C4C4 1px solid;
-  border-radius: 5px;
-} */
-
 .restaurant-card {
   display: flex;
   justify-content:space-between;
-  padding: 10px;
+  /* padding: 10px; */
+  /* border:#E5E5E5 solid 1px; */
+  margin-left: 10vw;
+  width: 80vw;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
-.restaurant-avatars {
+/* .restaurant-avatars {
   margin: auto 0;
+} */
+.restaurant-avatar {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  border-radius: 50%;
+  border: .5px solid lightgrey;
+  margin-top: 15px;
 }
 
 .restaurant-review {
@@ -88,21 +94,27 @@
 
 .restaurant-name {
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 14px;
+  margin: 5px;
+  margin-left: 15px;
 }
 
 .restaurant-cuisine {
- font-size: 14px;
+ font-size: 12px;
+ margin: 5px;
+ margin-left: 15px;
 }
 
 .restaurant-address {
-  font-size: 14px;
+  font-size: 12px;
+  margin: 5px;
+  margin-left: 15px;
 }
 
-.restaurant-rating{
+/* .restaurant-rating{
   height: 20px;
   width: 80px;
-}
+} */
 
 .restaurant-info {
   margin: auto 0;
@@ -113,51 +125,9 @@
  height: 40px;
 }
 
-.review {
-  margin: 10px 25px;
-}
-
-.review-title {
-  font-weight: bolder;
-  margin-bottom: 20px;
-}
-
-.review-box{
-  display: flex;
-  border-bottom: #E5E5E5 solid 1px;
-  margin-bottom: 10px;
-}
-
-.review-content {
-  margin-left: 20px;
-} 
-
 .weui-btn {
   border-radius: 0px;
   position: fixed;
   bottom: 0;
   width: 100vw;
-}
-
-/* .review-load {
-  margin:0 auto;
-  width: 50%;
-  font-size: 14px;
-} */
-
-
-.restaurant-card{
-  border:#E5E5E5 solid 1px;
-  margin: 20px;
-}
-
-.restaurant-avatar {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-}
-
-.restaurant-rating {
-  width: 60px;
-  height: 10px;
 }

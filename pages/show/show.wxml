@@ -1,13 +1,16 @@
 <!--pages/show/show.wxml-->
-<image class="food" src="{{ post.image }}"></image>
+<view class="food-photo-container">
+  <image class="food" src="{{ post.image }}"></image>
+</view>
+
 
 <view class="product-container">
   <view class="product-name">
     {{post.name}}
   </view>
     <view class="product-price">
-      <text class="new-price">{{ post.new_price }}</text> 
-      <text class="old-price">{{ post.original_price }}</text>
+      <text class="new-price">¥{{ post.new_price }}</text> 
+      <text class="old-price">¥{{ post.original_price }}</text>
     </view>
     <view class="product-description">
       {{post.description}}
@@ -16,7 +19,7 @@
     <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg">
     </image>
       <view class="time">
-        <view class="time-table">Pickup between {{starttime}} - {{endtime}}</view>
+        <view class="time-table">Pickup between {{post.start_time}} - {{post.end_time}}</view>
       </view>
       
    
@@ -36,26 +39,13 @@
 
 <view class="restaurant-card" bindtap='jumpToRestaurant'>
  <view class="restaurant-avatars">
-  <image class="restaurant-avatar" src="/images/avatar.png"></image>
+  <image class="restaurant-avatar" src="{{restaurant.image}}"></image>
   </view>
   <view class="rpostpostposddfdfdfestaurant-info">
     <view class="restaurant-name">{{restaurant.name}}</view>
     <view class="restaurant-cuisine">{{restaurant.cuisine}}</view>
     <view class="restaurant-address">{{restaurant.address}}</view>
-  </view>
-  <view class="restaurant-review">
-    <image class="restaurant-rating" src="/images/rating.png">{{restaurant.rating}}
-    </image>
+
   </view>
 </view>
-
-<!-- <view class="review">
- <view class="review-title">Reviews</view>
- <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="review-box" data-item="{{item}}">
-   <view class="user-avatar"><image class="user-avatars" src="{{item.image}}"></image></view>
-   <view class="review-content">{{item.content}}</view>
- </view>
-</view>  -->
-<!-- <button class="review-load">Load more reviews</button> -->
-
 <button class="weui-btn" type="primary" bindtap='jumpToClaim'>Claim it!</button> 
