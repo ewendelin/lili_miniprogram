@@ -1,12 +1,3 @@
-<!--pages/review/review.wxml-->
-<!-- <view class="container">
-    <view class="card-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('{{pup.images[0]}}')">
-    </view>
-  <view class="pup-infor">
-    <view><text class="pup-name">{{pup.name}}</text></view>
-    <view><text class="pup-location">⛪{{pup.location}}</text></view>
-  </view>
-</view> -->
 <view class="review-container">
 <view class="add-review">Create a review</view>
 <view class="form-fields">

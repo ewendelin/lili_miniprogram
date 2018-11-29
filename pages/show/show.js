@@ -11,27 +11,32 @@ Page({
     oldprice:"$30",
     latitude: 23.099994,
     longitude: 113.324520,
-    starttime:"10:00",
-    endtime:"20:00",
+    starttime:"22.00",
+    endtime:"23:00",
     everyday:"everyday",
     restaurantname:"Grandpa's memory",
     restaurantcuisine:"Dessert, Bakery & Pastries",
     restaurantaddress:"Nanjing Xi Lu",
-       items: [
-      {
-        content: "aaa",
-        image: "/images/avata-dog.png"
-      },
-      {
-        content: "aaa",
-        image: "/images/avata-dog.png"
-      }
-    ]
+    //    items: [
+    //   {
+    //     content: "aaa",
+    //     image: "/images/avata-dog.png"
+    //   },
+    //   {
+    //     content: "aaa",
+    //     image: "/images/avata-dog.png"
+    //   }
+    // ]
   },
 
   jumpToRestaurant(e) {
     wx.navigateTo({
       url: `../restaurant/restaurant`
+    });
+  },
+  jumpToClaim(e) {
+    wx.navigateTo({
+      url: `../claim/claim`
     });
   },
   /**
