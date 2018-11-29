@@ -56,7 +56,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    // serverUrl: "http://lilixia.wogengapp.cn/"
-    serverUrl: "http://localhost:3000/"
+    userId: null,
+    serverUrl: "http://lilixia.wogengapp.cn"
+    // serverUrl: "http://localhost:3000"
   }
 })
