@@ -77,8 +77,14 @@ Page({
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts`,
       success: (res) => {
+        const data = res.data;
+        let posts = data.posts
+        posts = posts.map((post) => {
+          post.new_price = post.original_price * post.discount.toFixed(1)
+          return post
+        });
         page.setData({
-          items: res.data.posts
+          items: posts
         })
       }
     })
