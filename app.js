@@ -5,13 +5,34 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    let app = this
 
     // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    wx.checkSession({
+      success: function(res) {
+        console.log(res)
+      },
+      fail: function (res) {
+        wx.login({
+          success: (res) => {
+            console.log(res)
+            wx.request({
+              url: app.globalData.serverUrl + 'login',
+              method: 'POST',
+              data: {
+                code: res.code
+              },
+              success: (res) => {
+                console.log(res)
+                wx.setStorageSync('userId', res.data.userId)
+              }
+              // insert next code here
+            })
+          }
+        })
       }
     })
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -36,6 +57,7 @@ App({
   globalData: {
     userInfo: null,
     access_token: '',
-    serverUrl: "http://lilixia.wogengapp.cn/"
+    serverUrl: "http://lilixia.wogengapp.cn/",
+    userId: null
   }
 })

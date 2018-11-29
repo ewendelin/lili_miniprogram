@@ -43,6 +43,12 @@ Page({
       })
     }
   },
+  goToLandingPage: function () {
+    wx.navigateTo({
+      url: '/pages/landing/landing'
+    })
+  },
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

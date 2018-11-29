@@ -1,11 +1,13 @@
 // pages/claim/claim.js
+let app = getApp();
+
 Page({
 
   deleteItem: function (e) {
     const data = e.currentTarget.dataset;
     const itemid = data.itemid;
     const page = this
-    console.log(data)
+    console.log(data);
 
     wx.showModal({
       title: 'CANCEL',
@@ -40,14 +42,42 @@ Page({
    */
   data: {
     latitude: 23.099994,
-    longitude: 113.324520
+    longitude: 113.324520,
+    claim: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let page = this;
+    console.log(options);
 
+    // let post_id = 
+    // page.getData(page, post_id);
+
+    // // Save reference to page
+    // console.log(options);
+    // let page = this;
+    // let post_id = options.post_id;
+    // let claim_id = options.id;
+
+    // // Get api data
+    // wx.request({
+    //   url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims/${claim_id}`,
+    //   method: 'GET',
+    //   success(res) {
+    //     const data = res.data;
+    //     console.log(data);
+    //     // let post = data.post
+    //     // post.new_price = post.original_price * post.discount.toFixed(1)
+    //     // // Update local data
+    //     // page.setData({
+    //     //   post: post,
+    //     //   restaurant: data.restaurant
+    //     // });
+    //   }
+    // });
   },
 
   /**
@@ -97,5 +127,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getData: function (page) {
+    // let post_id = ;
+    // let claim_id = ;
+
+    // wx.request({
+    //   url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims/${claim_id}`,
+    //   method: 'GET',
+    //   success(res) {
+    //     const data = res.data;
+    //     // Update local data
+    //     page.setData({
+          
+    //     });
+    //   }
+    // });
   }
+
 })
