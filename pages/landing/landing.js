@@ -131,9 +131,15 @@ Page({
     });
   },
   inputTyping: function (e) {
-    this.setData({
-      inputVal: e.detail.value
-    });
+    let page = this;
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts?keyword=${e.detail.value}`,
+      success: (res) => {
+        page.setData({
+          items: res.data.posts
+        })
+      }
+    })
   },
 
   onReady: function (e) {
