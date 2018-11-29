@@ -1,20 +1,48 @@
+.claim-photo-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .claim-food {
-  border-radius: 10px;
+  max-height: 300px;
+  object-fit: cover;
 }
-
-.claim-content {
-  font-size: 14px;
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.claim-name {
-  font-weight: bold;
+.claim-title {
+  width: 80vw;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.claim-content1 {
+  width: 80vw;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.claim-content2 {
+  width: 80vw;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .weui-btn {
   margin:30px;
-  width: 180px;
+  width: 80vw;
 }
 
 #claim-map {
-  margin-top: 20px;
+  width: 80vw;
+  align-content: center;
+  margin-top:15px;
+  margin-bottom: 15px;
 }
