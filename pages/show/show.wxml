@@ -1,5 +1,8 @@
 <!--pages/show/show.wxml-->
-<image class="food" src="{{ post.image }}"></image>
+<view class="food-photo-container">
+  <image class="food" src="{{ post.image }}"></image>
+</view>
+
 
 <view class="product-container">
   <view class="product-name">

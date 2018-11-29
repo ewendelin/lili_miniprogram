@@ -1,10 +1,15 @@
 /* pages/show/show.wxss */
 .food {
-  width: 100vw;
   max-height: 300px;
-  background-size: cover !important;
-  background-position: center;
+  object-fit: cover;
 }
+
+.food-photo-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .product-container {
   display: flex;
   flex-direction: column;
@@ -68,7 +73,7 @@
   margin-left: 10vw;
   width: 80vw;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 /* .restaurant-avatars {
