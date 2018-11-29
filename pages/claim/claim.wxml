@@ -3,7 +3,7 @@
 <view class="claim-title">Congrates!</view>
 
 <view class="claim-content">
-You are making a claim for Apple pie from Grandpa’s memory
+You are making a claim for {{claim.dish}} from {{claim.restaurant}}
 </view>
 
 <view class="claim-content">We recommand you go get it in the next 10 minutes.</view>

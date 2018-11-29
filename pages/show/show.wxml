@@ -39,12 +39,12 @@
   <image class="restaurant-avatar" src="/images/avatar.png"></image>
   </view>
   <view class="rpostpostposddfdfdfestaurant-info">
-    <view class="restaurant-name">{{restaurantname}}</view>
-    <view class="restaurant-cuisine">{{restaurantcuisine}}</view>
-    <view class="restaurant-address">{{restaurantaddress}}</view>
+    <view class="restaurant-name">{{restaurant.name}}</view>
+    <view class="restaurant-cuisine">{{restaurant.cuisine}}</view>
+    <view class="restaurant-address">{{restaurant.address}}</view>
   </view>
   <view class="restaurant-review">
-    <image class="restaurant-rating" src="/images/rating.png">{{restaurantrating}}
+    <image class="restaurant-rating" src="/images/rating.png">{{restaurant.rating}}
     </image>
   </view>
 </view>
