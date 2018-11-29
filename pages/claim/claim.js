@@ -7,7 +7,7 @@ Page({
     const data = e.currentTarget.dataset;
     const itemid = data.itemid;
     const page = this
-    console.log(data)
+    console.log(data);
 
     wx.showModal({
       title: 'CANCEL',
