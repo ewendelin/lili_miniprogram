@@ -38,6 +38,35 @@ Page({
     });
   },
   jumpToClaim(e) {
+    let page = this;
+    let post_id = page.data.post.id;
+    let post = page.data.post;
+    let restaurant = page.data.restaurant;
+    let claimData = {
+      claim: {
+        dish: post.name,
+        restaurant: restaurant.name
+      }
+    };
+    let userId = wx.getStorageSync('userId')
+
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims?user_id=${userId}`, //仅为示例，并非真实的接口地址,
+      method: 'POST',
+      data: claimData,
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data)
+        // wx.navigateBack({
+        // })
+        wx.navigateTo({
+          url: `../claim/claim?id=${res.data}`
+        });
+      }
+    })
+
     wx.navigateTo({
       url: `../claim/claim`
     });
@@ -45,28 +74,20 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+
+  
+
   onLoad: function (options) {
     // Save reference to page
     let page = this;
     let post_id = options.id;
 
     // Get api data
-    wx.request({
-      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}`,
-      method: 'GET',
-      success(res) {
-        const data = res.data;
-        let post = data.post
-        post.new_price = post.original_price * post.discount.toFixed(1)
-        // Update local data
-        page.setData({
-          post: post,
-          restaurant: data.restaurant
-        });
-      }
-    });
+    page.getData(page, post_id);
+    
+  },
 
-},
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -115,5 +136,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getData: function (page, post_id) {
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}`,
+      method: 'GET',
+      success(res) {
+        const data = res.data;
+        let post = data.post
+        post.new_price = post.original_price * post.discount.toFixed(1)
+        // Update local data
+        page.setData({
+          post: post,
+          restaurant: data.restaurant
+        });
+      }
+    });
   }
 })

@@ -1,4 +1,6 @@
 // pages/restaurant/restaurant.js
+let app = getApp();
+
 Page({
 
   /**
@@ -8,6 +10,9 @@ Page({
     postRating: 3,
     showRatingModal: false,
     rating: [],
+
+    restaurant: {},
+    posts: {}
   },
 
   userRating: function () {
@@ -38,7 +43,36 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this;
+    console.log(page);
 
+    page.getData(page, post_id);
+    // console.log(page);
+    // let post_id = options.id;
+
+    // wx.request({
+    //   url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
+    //   method: 'GET',
+    //   success(res) {
+    //     const data = res.data;
+    //     let posts = data.posts
+
+    //     page.setData({
+    //       restaurant: data.restaurants
+    //     });
+
+
+
+
+        // const data = res.data;
+        // let post = data.post
+        // post.new_price = post.original_price * post.discount.toFixed(1)
+        // // Update local data
+        // page.setData({
+        //   post: post,
+        //   restaurant: data.restaurant
+        // });
+      // }})
   },
 
   /**
@@ -110,5 +144,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getData: function (page, post_id) {
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
+      method: 'GET',
+      success(res) {
+        const data = res.data;
+        let restaurant = data.restaurant
+        
+        // Update local data
+        page.setData({
+          
+          restaurant: data.restaurant
+        });
+      }
+    });
   }
 })

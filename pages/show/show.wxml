@@ -45,6 +45,7 @@
     <view class="restaurant-name">{{restaurant.name}}</view>
     <view class="restaurant-cuisine">{{restaurant.cuisine}}</view>
     <view class="restaurant-address">{{restaurant.address}}</view>
+
   </view>
 </view>
 <button class="weui-btn" type="primary" bindtap='jumpToClaim'>Claim it!</button> 

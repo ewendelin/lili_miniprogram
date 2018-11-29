@@ -1,5 +1,7 @@
+
 <view class="claim-photo-container">
   <image class="claim-food" src="{{claim.image}}"></image>
+
 </view>
 <view class="text-container">
   <view class="claim-title">Yuuum!</view>
