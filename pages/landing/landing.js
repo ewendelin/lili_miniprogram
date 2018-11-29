@@ -12,9 +12,6 @@
 //   /**
 //    * Lifecycle function--Called when page load
 //    */
-//   onLoad: function (options) {
-
-//   },
 
 //   /**
 //    * Lifecycle function--Called when page is initially rendered
@@ -65,21 +62,26 @@
 
 //   }
 // })
-
+let app = getApp();
 Page({
   data: {
     inputShowed: false,
     inputVal: "",
     showMap: true,
     showMapBtn: "Hide Map",
-    items: [
-      {
-        name: "Apple Pie",
-        distance: "100m",
-        price: "$ 40",
-        image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=668&q=80"
+    items: []
+  }, 
+  
+  onLoad: function (options) {
+    let page = this
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts`,
+      success: (res) => {
+        page.setData({
+          items: res.data.posts
+        })
       }
-    ]
+    })
   },
   
   toggleMap: function() {

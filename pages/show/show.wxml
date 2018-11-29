@@ -1,16 +1,16 @@
 <!--pages/show/show.wxml-->
-<image class="food" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=668&q=80"></image>
+<image class="food" src="{{ post.image }}"></image>
 
 <view class="product-container">
   <view class="product-name">
-    {{productname}}
+    {{post.name}}
   </view>
     <view class="product-price">
-      <text class="new-price">$10</text> 
-      <text class="old-price">$35</text>
+      <text class="new-price">{{ post.new_price }}</text> 
+      <text class="old-price">{{ post.original_price }}</text>
     </view>
     <view class="product-description">
-      {{description}}
+      {{post.description}}
     </view>
   <view class="flexbox">
     <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg">
@@ -38,7 +38,7 @@
  <view class="restaurant-avatars">
   <image class="restaurant-avatar" src="/images/avatar.png"></image>
   </view>
-  <view class="restaurant-info">
+  <view class="rpostpostposddfdfdfestaurant-info">
     <view class="restaurant-name">{{restaurantname}}</view>
     <view class="restaurant-cuisine">{{restaurantcuisine}}</view>
     <view class="restaurant-address">{{restaurantaddress}}</view>
