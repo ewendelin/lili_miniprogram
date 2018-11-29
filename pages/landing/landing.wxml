@@ -61,11 +61,6 @@
       <text class="new-price">¥{{ item.new_price }}</text> 
       <text class="old-price">¥{{ item.original_price }}</text>
     </view>
-
-    </view>
-
-    <view class="buy-button">
-      <image class="buy-buttons" src="/images/buy.png"></image>
     </view>
   </view>
 </view>
