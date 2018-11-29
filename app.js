@@ -36,6 +36,6 @@ App({
   globalData: {
     userInfo: null,
     access_token: '',
-    serverUrl: "http://lilixia.wogengapp.cn"
+    serverUrl: "http://lilixia.wogengapp.cn/"
   }
 })
