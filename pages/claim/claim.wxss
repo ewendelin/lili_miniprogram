@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(253, 253, 253);
 }
 .claim-title {
   width: 80vw;
@@ -21,6 +22,7 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
+  color:#FF8616;
 }
 .claim-content1 {
   width: 80vw;
