@@ -51,7 +51,8 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    console.log(options);
+    console.log(options.post_id);
+    
 
     // let post_id = 
     // page.getData(page, post_id);

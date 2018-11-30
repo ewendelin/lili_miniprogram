@@ -1,6 +1,6 @@
 // // pages/landing/landing.js
 // Page({
-  
+
 
 //   /**
 //    * Page initial data
@@ -70,9 +70,11 @@ Page({
     showMap: true,
     showMapBtn: "Hide Map",
     items: []
-  }, 
-  
-  onLoad: function (options) {
+  },
+
+  onLoad: function(options) {
+
+
     let page = this
     wx.request({
       url: `${app.globalData.serverUrl}api/v1/posts`,
@@ -88,8 +90,13 @@ Page({
         })
       }
     })
+
+    // insert next code here
+
+
+
   },
-  
+
   toggleMap: function() {
     console.log('Toggle Map A Go')
     if (this.data.showMap) {
@@ -114,23 +121,23 @@ Page({
     });
   },
 
-  showInput: function () {
+  showInput: function() {
     this.setData({
       inputShowed: true
     });
   },
-  hideInput: function () {
+  hideInput: function() {
     this.setData({
       inputVal: "",
       inputShowed: false
     });
   },
-  clearInput: function () {
+  clearInput: function() {
     this.setData({
       inputVal: ""
     });
   },
-  inputTyping: function (e) {
+  inputTyping: function(e) {
     let page = this;
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts?keyword=${e.detail.value}`,
@@ -142,7 +149,7 @@ Page({
     })
   },
 
-  onReady: function (e) {
+  onReady: function(e) {
     let page = this
     wx.getLocation({
       type: 'gcj02',
