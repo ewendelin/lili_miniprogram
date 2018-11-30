@@ -39,18 +39,24 @@ Page({
   },
   jumpToClaim(e) {
     let page = this;
+    console.log(`page: ${page}`);
     let post_id = page.data.post.id;
-    let post = page.data.post;
+    console.log(`post id : ${post_id}`);
+    let post = page.data.post.name;
+    console.log(`post: ${post}`);
     let restaurant = page.data.restaurant;
+    console.log(`restaurant: ${restaurant}`);
     let claimData = {
       claim: {
-        dish: post.name,
-        restaurant: restaurant.name
+        dish: page.data.post.name,
+        restaurant: page.data.restaurant.name
       }
     };
-    // let userId = wx.getStorageSync('userId');
+
+    console.log(`claimdata: ${claimData.claim.dish}`);
+
     let userId = app.globalData.userId;
-    console.log(userId);
+    console.log(`click btn: ${userId}`);
 
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims?user_id=${userId}`, //仅为示例，并非真实的接口地址,
@@ -60,7 +66,8 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res) {
-        console.log(res.data)
+        console.log(`res: ${res.data}`)
+        // wx.setStorageSync('res', res)
         // wx.navigateBack({
         // })
         wx.navigateTo({
@@ -83,6 +90,8 @@ Page({
     // Save reference to page
     let page = this;
     let post_id = options.id;
+
+    console.log(`global data on show: ${app.globalData.userId}`);
 
     // Get api data
     page.getData(page, post_id);
