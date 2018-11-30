@@ -78,9 +78,9 @@
   margin-left: 5vw;
   margin-right: 5vw;
   /* border: 4px dotted #FF8616; */
-  background-color: #FF8616;
+  background-color:rgb(247, 247, 247);
   border-radius: 25px;
-  box-shadow: 1px 1px lightgrey;
+  box-shadow: 1px 1px rgb(214, 214, 214);
 }
 
 /* .restaurant-avatars {
@@ -142,4 +142,7 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
+  background-color: #FF8616;
+  color: white;
+  font-weight: bold;
 }

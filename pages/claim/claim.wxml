@@ -1,6 +1,7 @@
 
 <view class="claim-photo-container">
-  <image class="claim-food" src="{{post.image}}"></image>
+  <image src="https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif"></image>
+  <!-- <image class="claim-food" src="{{post.image}}"></image> -->
 
 </view>
 <view class="text-container">
