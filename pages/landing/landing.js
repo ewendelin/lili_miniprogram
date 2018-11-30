@@ -82,7 +82,8 @@ Page({
         const data = res.data;
         let posts = data.posts
         posts = posts.map((post) => {
-          post.new_price = (post.original_price * post.discount.toFixed(1)).toFixed(0)
+          // post.new_price = (post.original_price * post.discount.toFixed(1)).toFixed(0)
+          post.new_price = (post.original_price * post.discount).toFixed(0);
           return post
         });
         page.setData({
