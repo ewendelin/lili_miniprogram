@@ -44,22 +44,32 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    console.log(page);
+    
 
-    page.getData(page, post_id);
+    // page.getData(page, post_id);
     // console.log(page);
-    // let post_id = options.id;
+    let post_id = options.post_id;
+    // let restaurant = options.restaurant;
+    console.log(post_id)
 
-    // wx.request({
-    //   url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
-    //   method: 'GET',
-    //   success(res) {
-    //     const data = res.data;
-    //     let posts = data.posts
 
-    //     page.setData({
-    //       restaurant: data.restaurants
-    //     });
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
+      method: 'GET',
+      success(res) {
+        const data = res.data;
+        console.log(data)
+        let restaurant = data.restaurant;
+        console.log(restaurant)
+        let posts = data.restaurant.posts;
+
+        page.setData({
+          restaurant: restaurant,
+          posts: posts
+        });
+
+      }
+    });
 
 
 

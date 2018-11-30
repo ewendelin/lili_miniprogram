@@ -11,18 +11,22 @@ Page({
   },
 
   jumpToRestaurant(e) {
+    let page = this;
     wx.navigateTo({
-      url: `../restaurant/restaurant`
+      url: `../restaurant/restaurant?post_id=${page.data.post.id}`
+      
     });
   },
   jumpToClaim(e) {
     let page = this;
     console.log(`page: ${page}`);
     let post_id = page.data.post.id;
+    // wx.setStorageSync('post_id', post_id);
     console.log(`post id : ${post_id}`);
     let post = page.data.post.name;
     console.log(`post: ${post}`);
     let restaurant = page.data.restaurant;
+    // wx.setStorageSync('restaurant_id', restaurant.id);
     console.log(`restaurant: ${restaurant}`);
     let claimData = {
       claim: {
@@ -45,19 +49,15 @@ Page({
       },
       success(res) {
         console.log(`res: ${res.data}`)
-        // wx.setStorageSync('res', res)
+        wx.setStorageSync('res', res);
         // wx.navigateBack({
         // })
 
         wx.navigateTo({
-          url: `../claim/claim?id=${res.data}`
+          url: `../claim/claim?id=${res.data.claim.id}&post_id=${res.data.claim.post_id}`
         });
       }
     })
-
-    wx.navigateTo({
-      url: `../claim/claim`
-    });
   },
 
   /**
