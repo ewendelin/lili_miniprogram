@@ -44,14 +44,8 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    
-
-    // page.getData(page, post_id);
-    // console.log(page);
     let post_id = options.post_id;
-    // let restaurant = options.restaurant;
     console.log(post_id)
-
 
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
