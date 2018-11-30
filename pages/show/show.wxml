@@ -2,8 +2,6 @@
 <view class="food-photo-container">
   <image class="food" src="{{ post.image }}"></image>
 </view>
-
-
 <view class="product-container">
   <view class="product-name">
     {{post.name}}
@@ -19,21 +17,10 @@
     <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg">
     </image>
       <view class="time">
-        <view class="time-table">Pickup between {{post.start_time}} - {{post.end_time}}</view>
+        <view class="time-table">
+          Pickup between {{post.start_time}} - {{post.end_time}}
+        </view>
       </view>
-      
-   
-    <!-- <view class="flexbox">
-      <view class="right-content">
-        <map id="myMap"
-          latitude="{{latitude}}"
-          longitude="{{longitude}}"
-          markers="{{markers}}"
-          covers="{{covers}}"
-          show-location>
-        </map>
-      </view>  
-    </view>  -->
   </view>   
 </view>
 

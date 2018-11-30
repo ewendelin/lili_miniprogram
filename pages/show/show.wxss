@@ -1,13 +1,13 @@
 /* pages/show/show.wxss */
-.food {
-  max-height: 300px;
-  object-fit: cover;
-}
-
 .food-photo-container {
   width: 100vw;
   display: flex;
   justify-content: center;
+}
+.food {
+  max-height: 300px;
+  object-fit: cover;
+  width: 100vw;
 }
 
 .product-container {
@@ -32,14 +32,14 @@
 .new-price {
   font-size: 20px;
   width: 80vw;
-  color: red;
+  color: #FF8616;
   margin-right: 15px;
 }
 .old-price {
   width: 80vw;
   font-size: 16px;
   text-decoration: line-through;
-  color: gray
+  color: lightgrey;
 }
 
 .product-description {
@@ -67,13 +67,20 @@
 }
 .restaurant-card {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-evenly;
   /* padding: 10px; */
   /* border:#E5E5E5 solid 1px; */
-  margin-left: 10vw;
-  width: 80vw;
+  /* margin-left: 10vw; */
+  width: 90vw;
+  height: 125px;
   margin-top: 20px;
   margin-bottom: 100px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  /* border: 4px dotted #FF8616; */
+  background-color: #FF8616;
+  border-radius: 25px;
+  box-shadow: 1px 1px lightgrey;
 }
 
 /* .restaurant-avatars {
@@ -82,10 +89,11 @@
 .restaurant-avatar {
   width: 60px;
   height: 60px;
-  margin: 5px;
+  margin: 10px;
   border-radius: 50%;
   border: .5px solid lightgrey;
-  margin-top: 15px;
+  margin-top: 30px;
+  margin-left: 25px;
 }
 
 .restaurant-review {
@@ -97,18 +105,22 @@
   font-size: 14px;
   margin: 5px;
   margin-left: 15px;
+  margin-top:20px;
+  color: black;
 }
 
 .restaurant-cuisine {
  font-size: 12px;
  margin: 5px;
  margin-left: 15px;
+ color: black;
 }
 
 .restaurant-address {
   font-size: 12px;
   margin: 5px;
   margin-left: 15px;
+  color: black;
 }
 
 /* .restaurant-rating{

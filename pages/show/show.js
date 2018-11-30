@@ -8,28 +8,6 @@ Page({
   data: {
     post: {},
     restaurant: {}
-    // description: "The basis of Dutch apple pie is a crust on the bottom and around the edges.",
-    // productname: "Apple pie",
-    // discount:"$40",
-    // oldprice:"$30",
-    // latitude: 23.099994,
-    // longitude: 113.324520,
-    // starttime:"22.00",
-    // endtime:"23:00",
-    // everyday:"everyday",
-    // restaurantname:"Grandpa's memory",
-    // restaurantcuisine:"Dessert, Bakery & Pastries",
-    // restaurantaddress:"Nanjing Xi Lu",
-    //    items: [
-    //   {
-    //     content: "aaa",
-    //     image: "/images/avata-dog.png"
-    //   },
-    //   {
-    //     content: "aaa",
-    //     image: "/images/avata-dog.png"
-    //   }
-    // ]
   },
 
   jumpToRestaurant(e) {
@@ -70,6 +48,7 @@ Page({
         // wx.setStorageSync('res', res)
         // wx.navigateBack({
         // })
+
         wx.navigateTo({
           url: `../claim/claim?id=${res.data}`
         });
@@ -80,6 +59,7 @@ Page({
       url: `../claim/claim`
     });
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -149,6 +129,7 @@ Page({
 
   },
 
+
   getData: function (page, post_id) {
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}`,
@@ -156,7 +137,9 @@ Page({
       success(res) {
         const data = res.data;
         let post = data.post
-        post.new_price = post.original_price * post.discount.toFixed(1)
+        console.log(post)
+        post.start_time
+        post.new_price = post.original_price * post.discount.toFixed(0)
         // Update local data
         page.setData({
           post: post,
@@ -164,5 +147,11 @@ Page({
         });
       }
     });
-  }
+  },
+
+  onLoad: function (options) {
+    let page = this;
+    let post_id = options.id;
+    page.getData(page, post_id);
+  },
 })

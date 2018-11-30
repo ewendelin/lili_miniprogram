@@ -64,5 +64,6 @@ App({
     userId: null,
     // serverUrl: "http://lilixia.wogengapp.cn/"
     serverUrl: "http://localhost:3000/"
+
   }
 })

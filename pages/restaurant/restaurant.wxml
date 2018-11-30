@@ -2,22 +2,21 @@
 </image>
 <view class="restaurant-container">
   <view class="restaurant-name">
-    Grandpa's memory {{restaurant.name}}
+    {{restaurant.name}}
   </view> 
   <view class="star-rating">
     <view class="{{restaurant.rating}}">
-    *****
+    
     </view>
   </view>
   <view class="restaurant-cuisine">
-    French {{restaurant.cuisine}}
+    {{restaurant.cuisine}}
   </view> 
-  <view class="restaurant-description">
-    This is a great little text about why the restaurant joined our platform. 
+  <view class="restaurant-description"> 
     {{restaurant.description}}
   </view>
    <view class="restaurant-address">
-    Address: Anfu Lu{{restaurant.address}}
+    Address: {{restaurant.address}}
   </view>
 </view> 
 <view class="find-on-map">
