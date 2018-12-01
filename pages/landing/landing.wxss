@@ -164,6 +164,7 @@
 
 .card-description .restaurant-name {
   font-size: 12px;
+}
 
 .controls {
   position:absolute;

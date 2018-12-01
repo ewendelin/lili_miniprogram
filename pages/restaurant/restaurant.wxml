@@ -1,4 +1,4 @@
-<image class="respic" src="https://media-cdn.tripadvisor.com/media/photo-s/12/4e/66/95/rac.jpg">
+<image class="respic" src="{{restaurant.image}}">
 </image>
 <view class="restaurant-container">
   <view class="restaurant-name">
