@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -9,33 +9,33 @@ App({
 
     // 登录
     // wx.checkSession({
-      // success: function(res) {
-      //   console.log(res)
-      // },
-      // fail: function (res) {
-        wx.login({
+    // success: function(res) {
+    //   console.log(res)
+    // },
+    // fail: function (res) {
+    wx.login({
+      success: (res) => {
+        console.log(res);
+        console.log(app.globalData.serverUrl)
+        wx.request({
+          url: app.globalData.serverUrl + 'login',
+          method: 'post',
+          data: {
+            code: res.code
+          },
           success: (res) => {
-            console.log(res);
-            console.log(app.globalData.serverUrl)
-            wx.request({
-              url: app.globalData.serverUrl + 'login',
-              method: 'post',
-              data: {
-                code: res.code
-              },
-              success: (res) => {
-                wx.setStorageSync('userId', res.data.userId);
-                app.globalData.userId = wx.getStorageSync('userId');
-                console.log(`global id: ${app.globalData.userId}`);
-              }
-              // insert next code here
-              
-            })
+            wx.setStorageSync('userId', res.data.userId);
+            app.globalData.userId = wx.getStorageSync('userId');
+            console.log(`global id: ${app.globalData.userId}`);
           }
+          // insert next code here
+
         })
-      // }
+      }
+    })
+    // }
     // })
-    
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -46,8 +46,8 @@ App({
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
               console.log(`global id: ${this.globalData.userInfo}`)
-              
-              
+
+
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以
               if (this.userInfoReadyCallback) {
@@ -63,7 +63,6 @@ App({
     userInfo: null,
     userId: null,
     serverUrl: "https://lilixia.wogengapp.cn/"
-    // serverUrl: "http://10.183.242.142:3000/"
 
   }
 })

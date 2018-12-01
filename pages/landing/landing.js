@@ -69,11 +69,24 @@ Page({
     inputVal: "",
     showMap: true,
     showMapBtn: "Hide Map",
+    items: [],
+    showPanel:false,
+    markers: [{
+      iconPath: "/images/placeholder.png",
+      id: 0,
+      latitude: 31.233333,
+      longitude: 121.466666,
+      width: 30,
+      height: 30,
+    }],
+    post: {}
+  },
+  
+  onLoad: function (options) {
     items: []
   },
 
   onLoad: function(options) {
-
 
     let page = this
     wx.request({
@@ -82,7 +95,8 @@ Page({
         const data = res.data;
         let posts = data.posts
         posts = posts.map((post) => {
-          post.new_price = (post.original_price * post.discount.toFixed(1)).toFixed(0)
+          // post.new_price = (post.original_price * post.discount.toFixed(1)).toFixed(0)
+          post.new_price = (post.original_price * post.discount).toFixed(0);
           return post
         });
         page.setData({
@@ -90,12 +104,40 @@ Page({
         })
       }
     })
-
     // insert next code here
-
-
-
   },
+
+  markertap: function(){
+    this.setData({
+      showPanel: true
+    });
+  },
+
+  closePanel: function() {
+    this.setData ({
+      showPanel: false
+    });
+  },
+
+  getData: function (page, post_id) {
+    wx.request({
+      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}`,
+      method: 'GET',
+      success(res) {
+        const data = res.data;
+        let post = data.post
+        console.log(post)
+        post.start_time
+        post.new_price = post.original_price * post.discount.toFixed(0)
+        // Update local data
+        page.setData({
+          post: post,
+          restaurant: data.restaurant
+        });
+      }
+    });
+  },
+
 
   toggleMap: function() {
     console.log('Toggle Map A Go')
@@ -167,5 +209,4 @@ Page({
     })
     this.mapCtx = wx.createMapContext('myMap')
   },
-
 });
