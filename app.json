@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/show/show",
     "pages/logs/logs",
@@ -8,10 +8,10 @@
     "pages/review/review",
     "pages/claim/claim"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FF8616",
     "navigationBarTitleText": "粒粒侠",
-    "navigationBarTextStyle":"#FFF"
+    "navigationBarTextStyle": "#FFF"
   }
 }
