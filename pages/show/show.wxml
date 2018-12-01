@@ -2,8 +2,6 @@
 <view class="food-photo-container">
   <image class="food" src="{{ post.image }}"></image>
 </view>
-
-
 <view class="product-container">
   <view class="product-name">
     {{post.name}}
@@ -37,4 +35,4 @@
 
   </view>
 </view>
-<button class="weui-btn" type="primary" bindtap='jumpToClaim'>Claim it!</button> 
+<button class="weui-btn" bindtap='jumpToClaim'>Claim it!</button> 

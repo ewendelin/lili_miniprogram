@@ -1,17 +1,18 @@
 
 <view class="claim-photo-container">
-  <image class="claim-food" src="{{claim.image}}"></image>
+  <image src="https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif"></image>
+  <!-- <image class="claim-food" src="{{post.image}}"></image> -->
 
 </view>
 <view class="text-container">
   <view class="claim-title">Yuuum!</view>
 
   <view class="claim-content1">
-    You claimed {{claim.name}} from {{claim.restaurant}} at {{claim.claimed_at}}.
+    You claimed {{post.name}} from {{restaurant.name}} at {{claim.claimed_at}}.
   </view>
 
   <view class="claim-content2">
-    You will be able to pick up your food from {{claim.start-time}} to {{claim.end-time}} 
+    You will be able to pick up your food from {{post.start_time}} to {{post.end_time}} 
   </view>
 
     <map id="claim-map"
@@ -21,7 +22,7 @@
         covers="{{covers}}"
         show-location>
     </map>
-     <button class="weui-btn" type="warn" data-itemid="{{item.id}}" bindtap="deleteItem">
-      Cancel
+     <button class="weui-btn" data-itemid="{{item.id}}" bindtap="deleteItem">
+      <view class="cancel">Cancel</view>
     </button>
 </view>

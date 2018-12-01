@@ -51,8 +51,14 @@
     </view>
     <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
 
+    <view class="call-to-action">
+      <view class="quote">
+        Find your food tonight!
+      </view>
+    </view>
+
     <view class = "cards-menu">
-      <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(to top, black 10%, rgba(0,0,0,0)), url('{{ item.image }}');" data-item="{{item}}">
+      <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(to bottom, black .5%, rgba(0,0,0,0)), url('{{ item.image }}');" data-item="{{item}}">
         <!-- <view class="top-avatar">
         <image class="top-avatars" src="/images/avata-dog.png">
         </image>

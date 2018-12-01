@@ -11,24 +11,34 @@ Page({
   },
 
   jumpToRestaurant(e) {
+    let page = this;
     wx.navigateTo({
-      url: `../restaurant/restaurant`
+      url: `../restaurant/restaurant?post_id=${page.data.post.id}`
+      
     });
   },
   jumpToClaim(e) {
     let page = this;
+    console.log(`page: ${page}`);
     let post_id = page.data.post.id;
-    let post = page.data.post;
+    // wx.setStorageSync('post_id', post_id);
+    console.log(`post id : ${post_id}`);
+    let post = page.data.post.name;
+    console.log(`post: ${post}`);
     let restaurant = page.data.restaurant;
+    // wx.setStorageSync('restaurant_id', restaurant.id);
+    console.log(`restaurant: ${restaurant}`);
     let claimData = {
       claim: {
-        dish: post.name,
-        restaurant: restaurant.name
+        dish: page.data.post.name,
+        restaurant: page.data.restaurant.name
       }
     };
-    // let userId = wx.getStorageSync('userId');
+
+    console.log(`claimdata: ${claimData.claim.dish}`);
+
     let userId = app.globalData.userId;
-    console.log(userId);
+    console.log(`click btn: ${userId}`);
 
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims?user_id=${userId}`, //仅为示例，并非真实的接口地址,
@@ -38,17 +48,87 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res) {
-        console.log(res.data)
+        console.log(`res: ${res.data}`)
+        wx.setStorageSync('res', res);
+        // wx.navigateBack({
+        // })
+
         wx.navigateTo({
-          url: `../claim/claim?id=${res.data}`
+          url: `../claim/claim?id=${res.data.claim.id}&post_id=${res.data.claim.post_id}`
         });
       }
     })
-
-    wx.navigateTo({
-      url: `../claim/claim`
-    });
   },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+
+  
+
+  onLoad: function (options) {
+    // Save reference to page
+    let page = this;
+    let post_id = options.id;
+
+    console.log(`global data on show: ${app.globalData.userId}`);
+
+    // Get api data
+    page.getData(page, post_id);
+    
+  },
+
+  
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+
 
   getData: function (page, post_id) {
     wx.request({

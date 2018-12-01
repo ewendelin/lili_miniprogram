@@ -5,9 +5,9 @@
     {{restaurant.name}}
   </view> 
   <view class="star-rating">
-    <view class="{{restaurant.rating}}">
+    <!-- <view class="{{restaurant.rating}}">
     
-    </view>
+    </view> -->
   </view>
   <view class="restaurant-cuisine">
     {{restaurant.cuisine}}

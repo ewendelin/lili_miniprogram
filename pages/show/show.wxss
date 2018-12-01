@@ -80,8 +80,10 @@
   margin-bottom: 100px;
   margin-left: 5vw;
   margin-right: 5vw;
-  background-color: lightgrey;
-  border-radius: 10px;
+  /* border: 4px dotted #FF8616; */
+  background-color:rgb(247, 247, 247);
+  border-radius: 25px;
+  box-shadow: 1px 1px rgb(214, 214, 214);
 }
 
 /* .restaurant-avatars {
@@ -107,21 +109,21 @@
   margin: 5px;
   margin-left: 15px;
   margin-top:20px;
-  color: white;
+  color: black;
 }
 
 .restaurant-cuisine {
  font-size: 12px;
  margin: 5px;
  margin-left: 15px;
- color: white;
+ color: black;
 }
 
 .restaurant-address {
   font-size: 12px;
   margin: 5px;
   margin-left: 15px;
-  color: white;
+  color: black;
 }
 
 /* .restaurant-rating{
@@ -143,4 +145,7 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
+  background-color: #FF8616;
+  color: white;
+  font-weight: bold;
 }

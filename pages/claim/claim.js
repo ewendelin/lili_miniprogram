@@ -43,7 +43,9 @@ Page({
   data: {
     latitude: 23.099994,
     longitude: 113.324520,
-    claim: {}
+    claim: {},
+    post: {},
+    restaurant: {}
   },
 
   /**
@@ -51,17 +53,28 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    console.log(options);
+    console.log(options.post_id)
+    console.log(options.id)
+    let post_id = options.post_id;
+    let id = options.id;
+    
+    wx.request({
+      url: app.globalData.serverUrl + `api/v1/posts/${post_id}/claims/${id}`,
+    
+    method: 'GET',
+    success(res){
+      const data = res.data;
+      let claim = data.claim;
+      let post = data.post;
+      let restaurant = data.restaurant;
 
-    // let post_id = 
-    // page.getData(page, post_id);
-
-    // // Save reference to page
-    // console.log(options);
-    // let page = this;
-    // let post_id = options.post_id;
-    // let claim_id = options.id;
-
+      page.setData({
+        claim: claim,
+        post: post, 
+        restaurant: restaurant
+      });
+    }});
+    
     // // Get api data
     // wx.request({
     //   url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims/${claim_id}`,
