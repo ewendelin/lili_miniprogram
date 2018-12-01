@@ -161,6 +161,16 @@
   font-weight: bold;
 }
 
+
 .card-description .restaurant-name {
   font-size: 12px;
+
+.controls {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid gray;
+
 }
