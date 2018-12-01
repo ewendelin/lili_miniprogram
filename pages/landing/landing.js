@@ -73,8 +73,6 @@ Page({
   },
 
   onLoad: function(options) {
-
-
     let page = this
     wx.request({
       url: `${app.globalData.serverUrl}api/v1/posts`,
@@ -91,11 +89,7 @@ Page({
         })
       }
     })
-
     // insert next code here
-
-
-
   },
 
   toggleMap: function() {
@@ -168,5 +162,4 @@ Page({
     })
     this.mapCtx = wx.createMapContext('myMap')
   },
-
 });
