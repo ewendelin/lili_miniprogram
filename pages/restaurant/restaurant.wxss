@@ -14,34 +14,37 @@
   width: 80vw;
   font-weight: bolder;
   font-size: 20px;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-bottom:10px;
+  margin-top:15px;
 }
 .star-rating {
-width: 80vw;
-margin-bottom: 3px;
+  width: 80vw;
+  margin-bottom: 3px;
 }
 .restaurant-cuisine {
   width: 80vw;
   font-size: 14px;
   color: #616161;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #EEEEEE;
 }
-.restaurant-description {
+/* .restaurant-description {
   width: 80vw;
   font-size: 14px;
   margin-bottom: 3px;
-}
+} */
 .restaurant-address {
   width: 80vw;
   font-size: 14px;
+  /* margin-bottom: 10px; */
 }
 .find-on-map {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .map-card {
   height: 140px;
@@ -49,7 +52,7 @@ margin-bottom: 3px;
   /* text-shadow: 0 1px 1px rgba(0,0,0,0.6); */
   border-radius: 4px;
   /* border: .5px solid lightgray; */
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 #myMap {
   height: 100%;
@@ -67,6 +70,7 @@ margin-bottom: 3px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .review-title {
   width: 80vw;

@@ -14,9 +14,9 @@
   <view class="restaurant-cuisine">
     {{restaurant.cuisine}}
   </view> 
-  <view class="restaurant-description"> 
+  <!-- <view class="restaurant-description"> 
     {{restaurant.description}}
-  </view>
+  </view> -->
    <view class="restaurant-address">
     Address: {{restaurant.address}}
   </view>

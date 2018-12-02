@@ -48,7 +48,7 @@
 .product-description {
   width: 80vw;
   font-size: 14px;
-  margin-bottom: 3px;
+  /* margin-bottom: 3px; */
 }
 
 .flexbox {
