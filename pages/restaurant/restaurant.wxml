@@ -1,5 +1,7 @@
-<image class="respic" src="{{restaurant.image}}">
-</image>
+<view class='respic' style="background-image:url({{restaurant.image}})"></view>
+
+<!-- <image class="respic" src="{{restaurant.image}}"> -->
+<!-- </image> -->
 <view class="restaurant-container">
   <view class="restaurant-name">
     {{restaurant.name}}

@@ -1,6 +1,8 @@
 /* pages/restaurant/restaurant.wxss */
 .respic {
-  width: 100vw;
+  height:240px;
+  background-size:cover;
+  background-position:center;
 }
 .restaurant-container {
   display: flex;
