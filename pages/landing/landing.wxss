@@ -92,7 +92,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 5px;  
 }
 .call-to-action {
   display: flex;
@@ -191,6 +191,7 @@
   position: fixed;
   z-index: 90;
   width: 100%;
+  border-bottom: 1rpx solid #D7D6DC;
 }
 
 .fixed-box {
