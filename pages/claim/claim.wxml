@@ -1,19 +1,22 @@
 
-<view class="claim-photo-container">
-  <image src="https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif"></image>
+<view class="claim-photo-container" style="background-image:url('https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif')">
+  <!-- <image src="https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif"></image> -->
   <!-- <image class="claim-food" src="{{post.image}}"></image> -->
 
 </view>
 <view class="text-container">
   <view class="claim-title">Yuuum!</view>
 
-  <view class="claim-content1">
-    You claimed {{post.name}} from {{restaurant.name}} at {{claim.claimed_at}}.
-  </view>
+  <view class='claim-contents'>
+    <view class="claim-content1">
+      You claimed <text class='bold'>{{post.name}}</text> from <text class='bold'>{{restaurant.name}}</text> at {{claim.claimed_at}}.
+    </view>
 
-  <view class="claim-content2">
-    You will be able to pick up your food from {{post.start_time}} to {{post.end_time}} 
+    <view class="claim-content2">
+      You will be able to pick up your food from {{post.start_time}} to {{post.end_time}}.
+    </view>
   </view>
+  
 
     <map id="claim-map"
         latitude="{{latitude}}"
