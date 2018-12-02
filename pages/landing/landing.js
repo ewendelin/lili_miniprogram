@@ -1,7 +1,6 @@
 // // pages/landing/landing.js
 // Page({
 
-
 //   /**
 //    * Page initial data
 //    */
@@ -146,6 +145,7 @@ Page({
         showMap: false,
         showMapBtn: "Show Map"
       });
+      
     } else {
       this.setData({
         showMap: true,
