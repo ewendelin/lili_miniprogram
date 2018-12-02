@@ -72,16 +72,10 @@
   display: flex;
   justify-content: space-evenly;
   align-items:center;
-  /* padding: 10px; */
-  /* border:#E5E5E5 solid 1px; */
-  /* margin-left: 10vw; */
   width: 90vw;
   height: 125px;
-  
   margin-top: 20px;
-  margin-bottom: 100px;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-bottom: 80px;
   /* border: 4px dotted #FF8616; */
   /* background-color:rgb(247, 247, 247); */
   border-radius: 5px;
