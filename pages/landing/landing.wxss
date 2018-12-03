@@ -254,7 +254,7 @@ height: 100px;
   width: 80vw;
   margin:10px;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 18px;
   color: rgb(255, 188, 2);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
