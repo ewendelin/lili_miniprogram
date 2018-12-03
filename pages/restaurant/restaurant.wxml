@@ -33,32 +33,44 @@
     </map>
   </view>
 </view>
-<view class="reviews">
-  <view class="review-title">
-    Reviews
-  </view>
-  <view class="user-review-card">
-     <view class='star-rating'>{{review.rating}}****</view>
 
-    <view class="av-name">
-      <view class="user-avatar" src="">{{review.userInfo.avatarUrl}}</view>
-      <view class="user-name">{{review.userInfo.nickName}}</view>
+
+  <view class="reviews">
+    <view class="review-title">
+      Reviews
     </view>
-      <view class="user-input">
-        <view class="review-content">{{review.content}}Hej detta var jattebra. Smakar gott. Kommer absolut ga tillbaka.</view>
-        <!-- <view class="user-pic">{{review.photos}}</view> -->
+
+  <view wx:for="{{reviews}}" wx:for-item="review">
+    <view class="user-review-card">
+      
+        <view class='star-rating'>{{review.rating}}</view>
+
+        <view class="av-name">
+          <view class="user-avatar" src="">{{review.userInfo.avatarUrl}}</view>
+          <view class="user-name">{{review.userInfo.nickName}}</view>
+        </view>
+        <view class="user-input">
+          <view class="review-content">{{review.content}}</view>
+          <!-- <view class="user-pic">{{review.photos}}</view> -->
+        </view>
       </view>
     </view>
-    <block wx:if="{{userInfo}}">
-      <button class="create-review-btn" bindtap='createReview'>
-        Add a Review
-      </button>
-    </block>
-    <block wx:else>
-      <button class="create-review-btn" open-type="getUserInfo" bindgetuserinfo='createUserReview'>
-        Add a Review
-      </button>
-    </block>
-  </view> 
-  
-<!-- </view> -->
+    
+  </view>
+
+
+
+      <block wx:if="{{userInfo}}">
+        <button class="create-review-btn" bindtap='createReview'>
+          Add a Review
+        </button>
+      </block>
+      <block wx:else>
+        <button class="create-review-btn" open-type="getUserInfo" bindgetuserinfo='createUserReview'>
+          Add a Review
+        </button>
+      </block>
+    <!-- </view>  -->
+    
+  <!-- </view> -->
+

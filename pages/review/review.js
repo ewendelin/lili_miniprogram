@@ -14,34 +14,54 @@ Page({
   userInput: function (e) {
     const app = getApp();
     const page = this;
-    console.log(app.globalData.userId);
-    let review = e.detail.value;
-    review["user_id"] = app.globalData.userId;
-    review["restaurant_id"] = this.data.restaurantId;
-    review["rating"] = this.data.rating;
-    let post_id = 1
-    let restaurant_id = 1
-    console.log(review);
+    // console.log(app.globalData.userId);
+    let post_id = page.data.postId;
+    let restaurant_id = page.data.restaurantId;
+
+    let reviewData = {
+      user_id: page.data.userId,
+      // rating: e.detail.value.rating,
+      rating: page.data.rating,
+      restaurant_id: page.data.restaurantId,
+      content: e.detail.value.content,
+      // user_avatarurl: page.data.currentUserInfo.avatarUrl,
+      // user_nickname: page.data.currentUserInfo.nickName
+    }
+    wx.setStorageSync('reviewData', reviewData)
+
+    // console.log(`reviewData: ${reviewData}`)
+
+    // let review = e.detail.value;
+    // review["user_id"] = app.globalData.userId;
+    // review["restaurant_id"] = this.data.restaurantId;
+    // review["rating"] = this.data.rating;
+    // let post_id = 1
+    // let restaurant_id = 1
+    // console.log(review);
     // // Get api data
     wx.request({
       url: app.globalData.serverUrl+`api/v1/posts/${post_id}/restaurants/${restaurant_id}/reviews`,
       method: 'POST',
-      data: review,
-      success() {
+      data: reviewData,
+      success(res) {
+        console.log(res.data)
         // set data on index page and show
         // wx.switchTab({
         //   url: `/users/show/show`
         // });
-        wx.navigateBack({})
+        wx.navigateTo({
+          url: `../restaurant/restaurant?post_id=${post_id}`
+        })
       }
     });
-    wx.navigateBack({})
+    // wx.navigateBack({})
   },
   bindPickerChange: function (e) {
     this.setData({
       rating: Number.parseInt(e.detail.value) + 1
     });
   },
+
 
   /**
    * Page initial data
@@ -51,12 +71,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log(options);
-    wx.getStorageSync('currentUserInfo')
-    console.log(wx.getStorageSync('currentUserInfo'))
+    // wx.getStorageSync('currentUserInfo')
+    // console.log(wx.getStorageSync('currentUserInfo'))
     const app = getApp();
     this.setData({
-      restaurantId: options.restaurant_id
+      restaurantId: options.restaurant_id,
+      postId: options.post_id,
+      userId: options.userId,
+      currentUserInfo: options.currentUserInfo
       // restaurant: app.globalData.pupForReview
     });
   },
