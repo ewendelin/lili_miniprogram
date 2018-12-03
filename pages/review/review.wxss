@@ -67,6 +67,7 @@ btn-submit {
   font-weight: bolder;
   margin-bottom: 30px;
   margin-top: 30px;
+
 }
 .btn{
   /* background-color: #FF8616; */
@@ -83,7 +84,9 @@ btn-submit {
   justify-content: space-around;
   display: flex;
   align-items: center;
+  box-shadow: .2px .2px .2px .2px gray;
 }
 .btn-text {
 align-content: center;
+text-shadow: 1px 1px black;
 }

@@ -149,4 +149,6 @@
   background-color: #FFCA39;
   color: white;
   font-weight: bold;
+  text-shadow: 1px 1px black;
+  font-size: 20px;
 }
