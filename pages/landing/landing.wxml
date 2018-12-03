@@ -90,5 +90,7 @@
     </view>
   </view>
 </view>
-
+  <view class="footer">
+    <view class="footer-text">That was all for today folks, thank you for your support!</view>
+  </view>
 </view>
