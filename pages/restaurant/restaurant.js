@@ -10,9 +10,11 @@ Page({
     postRating: 3,
     showRatingModal: false,
     rating: [],
-
     restaurant: {},
-    posts: {}
+    posts: {},
+    latitude: "",
+    longitude: "",
+    markers: []
   },
 
   userRating: function () {
@@ -64,11 +66,23 @@ Page({
         let restaurant = data.restaurant;
         console.log(restaurant)
         let posts = data.restaurant.posts;
+        let latitude = data.restaurant.latitude;
+        let longitude = data.restaurant.longitude;
 
         page.setData({
           restaurant: restaurant,
           posts: posts,
-          userInfo: userInfo
+          userInfo: userInfo,
+          'map.latitude': latitude,
+          'map.longitude': longitude,
+          'map.markers': [{
+            latitude: latitude,
+            longitude: longitude,
+            iconPath: "/images/placeholder.svg",
+            name: "",
+            desc: ""
+          }],
+          'map.hasMarkers': true
         });
 
       }
@@ -91,25 +105,25 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function (e) {
-      let page = this
-      wx.getLocation({
-        type: 'gcj02',
-        success(res) {
-          const latitude = res.latitude
-          const longitude = res.longitude
-          const speed = res.speed
-          const accuracy = res.accuracy
-          console.log(latitude, longitude, speed, accuracy)
-          page.setData({
-            latitude: latitude,
-            longitude: longitude
-          })
-        }
-      })
-      this.mapCtx = wx.createMapContext('myMap')
+  // onReady: function (e) {
+  //     let page = this
+  //     wx.getLocation({
+  //       type: 'gcj02',
+  //       success(res) {
+  //         const latitude = res.latitude
+  //         const longitude = res.longitude
+  //         const speed = res.speed
+  //         const accuracy = res.accuracy
+  //         console.log(latitude, longitude, speed, accuracy)
+  //         page.setData({
+  //           latitude: latitude,
+  //           longitude: longitude
+  //         })
+  //       }
+  //     })
+  //     this.mapCtx = wx.createMapContext('myMap')
 
-  },
+  // },
 
   createReview: function () {
     let restaurant_id = this.data.restaurant.id

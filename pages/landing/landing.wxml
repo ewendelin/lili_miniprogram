@@ -43,10 +43,16 @@
         bindmarkertap="markertap"
         bindtap="closePanel"
         >
-        <cover-view class="controls" wx:if="{{ showPanel }}">
-        <cover-view>{{post.name}}</cover-view>
-        <cover-view>1233</cover-view>
-        <cover-view>1233</cover-view>
+        <cover-view class="controls" wx:if="{{ showPanel }}" bindtap='jumpToShow' data-id="{{rest.id}}">
+          <cover-view class="cover-left">	
+<cover-view><image class="cover-img" src="{{rest.image}}"></image></cover-view>	
+</cover-view>
+          <cover-view class="cover-right">
+          <cover-view class="cover-name">{{rest.name}}</cover-view>
+          <cover-view class="cover-restaurant">{{rest.restaurant}}</cover-view>
+          <cover-view class="cover-discount">¥{{rest.new_price}}</cover-view>
+          <cover-view class="cover-price">¥{{rest.original_price}}</cover-view>
+          </cover-view>
         </cover-view>
         </map>
       </view>

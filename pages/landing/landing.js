@@ -81,9 +81,9 @@ Page({
     post: {}
   },
   
-  onLoad: function (options) {
-    items: []
-  },
+  // onLoad: function (options) {
+  //   items: []
+  // },
 
   onLoad: function(options) {
 
@@ -98,23 +98,49 @@ Page({
           post.new_price = (post.original_price * post.discount).toFixed(0);
           return post
         });
+        let markers = posts.map((post) => {
+          return {
+            iconPath: "/images/placeholder.svg",
+            id: post.id,
+            width: 30,
+            height: 30,
+            longitude: post.longitude,
+            latitude: post.latitude
+          }
+        })
+        console.log(markers)
         page.setData({
-          items: posts
+          items: posts,
+          markers: markers
         })
       }
     })
     // insert next code here
   },
 
-  markertap: function(){
+  markertap: function(e){
+    console.log(e.markerId)
+    let id = e.markerId
+    console.log(id)
+    let rest = this.data.items[id - 1]
+    console.log(rest)
     this.setData({
-      showPanel: true
+      showPanel: true,
+      rest: rest
     });
   },
 
   closePanel: function() {
     this.setData ({
       showPanel: false
+    });
+  },
+
+  jumpToShow: function(e) {
+    console.log(e)
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `../show/show?id=${id}`
     });
   },
 
