@@ -170,8 +170,49 @@
   position:absolute;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 100px;
   background-color: #fff;
   border: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+}
 
+.marker-show {
+ position: relative;
+ top: 50px;
+ width:80px;
+ height:50px;
+ background-color:black;
+ color: white;
+ text-align: center;
+}
+
+.cover-img {
+width:150px;
+height: 100px;
+}
+
+.cover-right {
+  position: relative;
+  right: 80px;
+  margin:auto 0;
+}
+
+.cover-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cover-restaurant {
+  font-size: 19px;
+}
+
+.cover-discount {
+  font-size: 18px;
+  color: #FF8616;
+}
+
+.cover-price {
+  font-size: 17px;
+  text-decoration: line-through;
 }

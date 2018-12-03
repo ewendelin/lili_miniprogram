@@ -10,7 +10,7 @@
                     <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
                     <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
                     <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-                        <icon type="clear" size="14"></icon>
+                        <icon type="clear" size="12"></icon>
                     </view>
                 </view>
                 <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
@@ -30,7 +30,7 @@
     </view>
     <view>
       <map 
-      scale="14"
+      scale="15"
       id="myMap"
       style="width: 100%; height: 300px;" 
       latitude="{{latitude}}" 
@@ -42,10 +42,16 @@
       bindmarkertap="markertap"
       bindtap="closePanel"
       >
-       <cover-view class="controls" wx:if="{{ showPanel }}">
-       <cover-view>{{post.name}}</cover-view>
-      <cover-view>1233</cover-view>
-      <cover-view>1233</cover-view>
+       <cover-view class="controls" wx:if="{{ showPanel }}" bindtap='jumpToShow' data-id="{{rest.id}}">
+        <cover-view class="cover-left">
+        <cover-view><image class="cover-img" src="{{rest.image}}"></image></cover-view>
+        </cover-view>
+        <cover-view class="cover-right">
+         <cover-view class="cover-name">{{rest.name}}</cover-view>
+         <cover-view class="cover-restaurant">{{rest.restaurant}}</cover-view>
+         <cover-view class="cover-discount">¥{{rest.new_price}}</cover-view>
+         <cover-view class="cover-price">¥{{rest.original_price}}</cover-view>
+        </cover-view>
        </cover-view>
       </map>
     </view>
