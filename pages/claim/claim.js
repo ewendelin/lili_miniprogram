@@ -140,23 +140,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  getData: function (page) {
-    // let post_id = ;
-    // let claim_id = ;
-
-    // wx.request({
-    //   url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims/${claim_id}`,
-    //   method: 'GET',
-    //   success(res) {
-    //     const data = res.data;
-    //     // Update local data
-    //     page.setData({
-          
-    //     });
-    //   }
-    // });
   }
 
 })
