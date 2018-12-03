@@ -108,7 +108,7 @@ Page({
             latitude: post.latitude
           }
         })
-        console.log(markers)
+        console.log(posts)
         page.setData({
           items: posts,
           markers: markers
@@ -121,12 +121,14 @@ Page({
   markertap: function(e){
     console.log(e.markerId)
     let id = e.markerId
-    console.log(id)
-    let rest = this.data.items[id - 1]
+    console.log("id",id)
+    let rest = this.data.items.filter(function(item) {
+      return item.id == id
+    })
     console.log(rest)
     this.setData({
       showPanel: true,
-      rest: rest
+      rest: rest[0]
     });
   },
 
