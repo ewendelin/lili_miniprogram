@@ -37,5 +37,21 @@
   <view class="review-title">
     Reviews
   </view>
-  <view class="create-review-btn" bindtap="createReview">Add a Review</view>
-</view>
+  <view class="user-review-card">
+     <view class='star-rating'>{{review.star}}****</view>
+
+    <view class="av-name">
+      <view class="user-avatar" src="{{user-avatar-get-user-info}}"></view>
+      <view class="user-name">{{review.user}}Ellen</view>
+    </view>
+      <view class="user-input">
+        <view class="review-content">{{review.content}}Hej detta var jattebra. Smakar gott. Kommer absolut ga tillbaka.</view>
+        <view class="user-pic">{{review.photos}}</view>
+      </view>
+    </view>
+    <view class="create-review-btn" bindtap="createReview">
+    Add a Review
+  </view>
+  </view> 
+  
+<!-- </view> -->
