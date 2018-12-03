@@ -1,5 +1,7 @@
-<image class="respic" src="{{restaurant.image}}">
-</image>
+<view class='respic' style="background-image:url({{restaurant.image}})"></view>
+
+<!-- <image class="respic" src="{{restaurant.image}}"> -->
+<!-- </image> -->
 <view class="restaurant-container">
   <view class="restaurant-name">
     {{restaurant.name}}
@@ -12,9 +14,9 @@
   <view class="restaurant-cuisine">
     {{restaurant.cuisine}}
   </view> 
-  <view class="restaurant-description"> 
+  <!-- <view class="restaurant-description"> 
     {{restaurant.description}}
-  </view>
+  </view> -->
    <view class="restaurant-address">
     Address: {{restaurant.address}}
   </view>
@@ -35,5 +37,21 @@
   <view class="review-title">
     Reviews
   </view>
-  <view class="create-review-btn" bindtap="createReview">Add a Review</view>
-</view>
+  <view class="user-review-card">
+     <view class='star-rating'>{{review.star}}****</view>
+
+    <view class="av-name">
+      <view class="user-avatar" src="{{user-avatar-get-user-info}}"></view>
+      <view class="user-name">{{review.user}}Ellen</view>
+    </view>
+      <view class="user-input">
+        <view class="review-content">{{review.content}}Hej detta var jattebra. Smakar gott. Kommer absolut ga tillbaka.</view>
+        <view class="user-pic">{{review.photos}}</view>
+      </view>
+    </view>
+    <view class="create-review-btn" bindtap="createReview">
+    Add a Review
+  </view>
+  </view> 
+  
+<!-- </view> -->

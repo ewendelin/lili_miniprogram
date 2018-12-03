@@ -3,14 +3,14 @@
        <view class="page__title">SearchBar</view>
         <view class="page__desc">搜索栏</view>
    </view> -->
-    <view class="page__bd">
+    <view class="page_bd">
         <view class="weui-search-bar">
             <view class="weui-search-bar__form">
                 <view class="weui-search-bar__box">
                     <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
                     <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
                     <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-                        <icon type="clear" size="12"></icon>
+                        <icon type="clear" size="14"></icon>
                     </view>
                 </view>
                 <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
@@ -28,59 +28,64 @@
             </navigator>
         </view>
     </view>
-    <view>
-      <map 
-      scale="15"
-      id="myMap"
-      style="width: 100%; height: 300px;" 
-      latitude="{{latitude}}" 
-      longitude="{{longitude}}" 
-      markers="{{markers}}"
-      covers="{{covers}}"
-      show-location=true
-      wx:if="{{showMap}}"
-      bindmarkertap="markertap"
-      bindtap="closePanel"
-      >
-       <cover-view class="controls" wx:if="{{ showPanel }}" bindtap='jumpToShow' data-id="{{rest.id}}">
-        <cover-view class="cover-left">
-        <cover-view><image class="cover-img" src="{{rest.image}}"></image></cover-view>
+      <view>
+        <view class='map-box showmap'>
+        <map 
+        scale="14"
+        id="myMap"
+        style="width: 100%; height: 300px;" 
+        latitude="{{latitude}}" 
+        longitude="{{longitude}}" 
+        markers="{{markers}}"
+        covers="{{covers}}"
+        show-location=true
+        wx:if="{{showMap}}"
+        bindmarkertap="markertap"
+        bindtap="closePanel"
+        >
+        <cover-view class="controls" wx:if="{{ showPanel }}" bindtap='jumpToShow' data-id="{{rest.id}}">
+          <cover-view class="cover-left">	
+<cover-view><image class="cover-img" src="{{rest.image}}"></image></cover-view>	
+</cover-view>
+          <cover-view class="cover-right">
+          <cover-view class="cover-name">{{rest.name}}</cover-view>
+          <cover-view class="cover-restaurant">{{rest.restaurant}}</cover-view>
+          <cover-view class="cover-discount">¥{{rest.new_price}}</cover-view>
+          <cover-view class="cover-price">¥{{rest.original_price}}</cover-view>
+          </cover-view>
         </cover-view>
-        <cover-view class="cover-right">
-         <cover-view class="cover-name">{{rest.name}}</cover-view>
-         <cover-view class="cover-restaurant">{{rest.restaurant}}</cover-view>
-         <cover-view class="cover-discount">¥{{rest.new_price}}</cover-view>
-         <cover-view class="cover-price">¥{{rest.original_price}}</cover-view>
-        </cover-view>
-       </cover-view>
-      </map>
-    </view>
-    <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
-
-    <view class="call-to-action">
-      <view class="quote">
-        Find your food tonight!
+        </map>
       </view>
-    </view>
+      <view class='fixed-box' wx:if="{{showMap}}"></view>
+      <view>
+        <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
 
-    <view class = "cards-menu">
-      <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('{{ item.image }}');" data-item="{{item}}">
-        <!-- <view class="top-avatar">
-        <image class="top-avatars" src="/images/avata-dog.png">
-        </image>
-      </view> -->
-    <view class="card-description">
-      <view class="name">
-        {{item.name}}
-      </view>
+        <view class="call-to-action">
+          <view class="quote">
+            Find your food tonight!
+          </view>
+        </view>
 
-      <view class='restaurant-name'>
-        {{item.restaurant}}
-      </view>
+        <view class = "cards-menu">
+          <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('{{ item.image }}');" data-item="{{item}}">
+            <!-- <view class="top-avatar">
+            <image class="top-avatars" src="/images/avata-dog.png">
+            </image>
+          </view> -->
+        <view class="card-description">
+          <view class="name">
+            {{item.name}}
+          </view>
 
-      <view class="product-price">
-        <text class="new-price">¥{{ item.new_price }}</text> 
-        <text class="old-price">¥{{ item.original_price }}</text>
+          <view class='restaurant-name'>
+            {{item.restaurant}}
+          </view>
+
+          <view class="product-price">
+            <text class="new-price">¥{{ item.new_price }}</text> 
+            <text class="old-price">¥{{ item.original_price }}</text>
+          </view>
+        </view>
       </view>
     </view>
   </view>

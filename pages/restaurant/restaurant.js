@@ -69,7 +69,7 @@ Page({
           'map.markers': [{
             latitude: latitude,
             longitude: longitude,
-            iconPath: "/images/placeholder.png",
+            iconPath: "/images/placeholder.svg",
             name: "",
             desc: ""
           }],

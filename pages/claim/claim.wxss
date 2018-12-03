@@ -1,13 +1,16 @@
 .claim-photo-container {
-  width: 100vw;
+  /* width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
+  height:240px;
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
-.claim-food {
+/* .claim-food {
   max-height: 300px;
   object-fit: cover;
-}
+} */
 .text-container {
   display: flex;
   flex-direction: column;
@@ -21,20 +24,23 @@
   font-size: 20px;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 10px;
   color:#FF8616;
 }
-.claim-content1 {
+
+.claim-contents {
+  font-size:16px;
+  text-align:justify;
   width: 80vw;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 5px;
+  color: #676767;
+  margin-top:10px;
 }
+
 .claim-content2 {
-  width: 80vw;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .weui-btn {
@@ -53,6 +59,6 @@
 #claim-map {
   width: 80vw;
   align-content: center;
-  margin-top:15px;
-  margin-bottom: 15px;
+  margin-top:20px;
+  /* margin-bottom: 15px; */
 }

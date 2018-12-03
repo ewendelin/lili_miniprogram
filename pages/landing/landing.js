@@ -1,7 +1,6 @@
 // // pages/landing/landing.js
 // Page({
 
-
 //   /**
 //    * Page initial data
 //    */
@@ -72,7 +71,7 @@ Page({
     items: [],
     showPanel:false,
     markers: [{
-      iconPath: "/images/placeholder.png",
+      iconPath: "/images/placeholder.svg",
       id: 0,
       latitude: 31.233333,
       longitude: 121.466666,
@@ -101,7 +100,7 @@ Page({
         });
         let markers = posts.map((post) => {
           return {
-            iconPath: "/images/placeholder.png",
+            iconPath: "/images/placeholder.svg",
             id: post.id,
             width: 30,
             height: 30,
@@ -172,6 +171,7 @@ Page({
         showMap: false,
         showMapBtn: "Show Map"
       });
+      
     } else {
       this.setData({
         showMap: true,
