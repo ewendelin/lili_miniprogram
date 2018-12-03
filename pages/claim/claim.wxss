@@ -46,14 +46,15 @@
 .weui-btn {
   margin:30px;
   width: 30vw;
-  background-color: #FF8616;
+  background-color: #FFCA39;
   color:white;
-  opacity: .8;
   display: flex;
   justify-content: center;
+  box-shadow: .5px .5px .5px .5px black;
 }
 .cancel {
   text-align: center;
+  text-shadow: .5px .5px .5px .5px black;
 }
 
 #claim-map {
