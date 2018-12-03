@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -56,10 +56,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "Review",
 					"pathName": "pages/review/review",
-					"query": ""
+					"query": "restaurant_id=2"
 				},
 				{
 					"id": -1,

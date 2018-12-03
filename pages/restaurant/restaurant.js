@@ -45,8 +45,16 @@ Page({
   onLoad: function (options) {
     let page = this;
     let post_id = options.post_id;
-    console.log(post_id)
-
+    wx.setStorageSync('post_id', post_id)
+    let user = wx.getStorageSync('currentUserInfo')
+    let userInfo;
+    if (Object.keys(user).includes('avatar_url')) {
+      userInfo = true;
+      console.log(true)
+    } else {
+      userInfo = false
+      console.log(false)
+    }
     wx.request({
       url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
       method: 'GET',
@@ -59,7 +67,8 @@ Page({
 
         page.setData({
           restaurant: restaurant,
-          posts: posts
+          posts: posts,
+          userInfo: userInfo
         });
 
       }
@@ -103,11 +112,18 @@ Page({
   },
 
   createReview: function () {
+    let restaurant_id = this.data.restaurant.id
     wx.navigateTo({
-      url: '../review/review',
+      url: `../review/review?restaurant_id=${restaurant_id}`,
     })
   },
-
+  createUserReview: function (e) {
+    let restaurant_id = this.data.restaurant.id
+    wx.setStorageSync('currentUserInfo', e.detail.userInfo)
+    wx.navigateTo({
+      url: `../review/review?restaurant_id=${restaurant_id}`,
+    })
+  },
   /**
    * Lifecycle function--Called when page show
    */

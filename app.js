@@ -24,6 +24,7 @@ App({
             code: res.code
           },
           success: (res) => {
+            console.log(res)
             wx.setStorageSync('userId', res.data.userId);
             app.globalData.userId = wx.getStorageSync('userId');
             console.log(`global id: ${app.globalData.userId}`);

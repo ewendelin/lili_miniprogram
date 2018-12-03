@@ -10,7 +10,7 @@
   <picker bindchange="bindPickerChange" value="1" range="{{array}}">
     <view class="picker">
       <view class="your-rating">
-        Rating
+        Rating, tap to select
       </view> 
       <view class='star'>{{array[rating - 1]}}</view>
     </view>
