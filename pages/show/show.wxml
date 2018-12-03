@@ -40,4 +40,4 @@
 
 
 
-<button class="weui-btn" bindtap='jumpToClaim'>Claim it!</button> 
+<button class="weui-btn" open-type="getUserInfo" bindgetuserinfo='jumpToClaim'>Claim it!</button> 

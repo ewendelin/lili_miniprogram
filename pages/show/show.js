@@ -13,12 +13,14 @@ Page({
   jumpToRestaurant(e) {
     let page = this;
     wx.navigateTo({
-      url: `../restaurant/restaurant?post_id=${page.data.post.id}`
+      url: `../restaurant/restaurant?post_id=${page.data.post.id}&restaurant_id=${page.data.restaurant.id}`
       
     });
   },
   jumpToClaim(e) {
+    console.log(e.detail.userInfo)
     let page = this;
+    wx.setStorageSync('currentUserInfo', e.detail.userInfo)
     console.log(`page: ${page}`);
     let post_id = page.data.post.id;
     // wx.setStorageSync('post_id', post_id);
@@ -137,7 +139,7 @@ Page({
       success(res) {
         const data = res.data;
         let post = data.post
-        console.log(post)
+        console.log(data)
         post.start_time
         post.new_price = (post.original_price * post.discount).toFixed(0)
         // Update local data

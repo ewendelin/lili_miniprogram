@@ -72,7 +72,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items:center;
-  width: 90vw;
+  width: 80vw;
   height: 125px;
   margin-top: 20px;
   margin-bottom: 80px;
@@ -142,11 +142,11 @@
 }
 
 .weui-btn {
-  border-radius: 0px;
+  border-radius: 3px;
   position: fixed;
   bottom: 0;
   width: 100vw;
-  background-color: #FF8616;
+  background-color: #FFCA39;
   color: white;
   font-weight: bold;
 }
