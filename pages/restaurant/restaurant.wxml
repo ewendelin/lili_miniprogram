@@ -25,9 +25,9 @@
   <view class="map-card">
     <map 
       id="myMap" 
-      latitude="{{latitude}}" 
-      longitude="{{longitude}}" 
-      markers="{{markers}}"
+      latitude="{{map.latitude}}" 
+      longitude="{{map.longitude}}" 
+      markers="{{map.markers}}"
       covers="{{covers}}"
       show-location> 
     </map>
