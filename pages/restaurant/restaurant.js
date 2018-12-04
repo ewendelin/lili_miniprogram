@@ -12,6 +12,7 @@ Page({
     rating: [],
     restaurant: {},
     posts: {},
+    reviews: [],
     latitude: "",
     longitude: "",
     markers: []
@@ -82,8 +83,20 @@ Page({
             name: "",
             desc: ""
           }],
-          'map.hasMarkers': true
+          'map.hasMarkers': true,
         });
+
+        // get reviews
+        wx.request({
+          url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants/${restaurant.id}/reviews`,
+          method: 'GET',
+          success(res){
+            console.log(res);
+            page.setData({
+              reviews: res.data
+            })
+          }
+        })
 
       }
     });
@@ -134,15 +147,22 @@ Page({
   createUserReview: function (e) {
     let restaurant_id = this.data.restaurant.id
     wx.setStorageSync('currentUserInfo', e.detail.userInfo)
+    // wx.setStorageSync('userId', app.globalData.userId)
+    let userId = app.globalData.userId;
+    wx.setStorageSync('userId', userId);
+    let post_id = wx.getStorageSync('post_id')
+    let currentUserInfo = wx.getStorageSync('currentUserInfo');
+    
     wx.navigateTo({
-      url: `../review/review?restaurant_id=${restaurant_id}`,
+      url: `../review/review?post_id=${post_id}&restaurant_id=${restaurant_id}&userId=${userId}&currentUserInfo=${currentUserInfo}`,
     })
   },
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onShow: function (e) {
     // load reviews
+    wx.setStorageSync('options',options)
   },
 
   /**
@@ -180,20 +200,23 @@ Page({
 
   },
 
-  getData: function (page, post_id) {
-    wx.request({
-      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
-      method: 'GET',
-      success(res) {
-        const data = res.data;
-        let restaurant = data.restaurant
+  // getData: function (page, post_id) {
+  //   wx.request({
+  //     url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/restaurants`,
+  //     method: 'GET',
+  //     success(res) {
+  //       const data = res.data;
+  //       let restaurant = data.restaurant
         
-        // Update local data
-        page.setData({
+  //       // Update local data
+  //       page.setData({
           
-          restaurant: data.restaurant
-        });
-      }
-    });
-  }
+  //         restaurant: data.restaurant
+  //       });
+  //     }
+  //   });
+
+  //   // get reviews
+
+  // }
 })

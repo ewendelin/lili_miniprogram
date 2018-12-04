@@ -61,7 +61,7 @@
         <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
         <view class="call-to-action">
           <view class="quote">
-            Find your food tonight!
+            have a scroll and find some food to save tonight
           </view>
         </view>
 
@@ -87,4 +87,7 @@
     </view>
   </view>
 </view>
+  <view class="footer">
+    <view class="footer-text">that was all for today folks, hope to see you again soon</view>
+  </view>
 </view>
