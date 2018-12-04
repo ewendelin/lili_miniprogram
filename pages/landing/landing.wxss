@@ -3,7 +3,18 @@
   top:0;
   z-index:100;
 }
-
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
 .weui-search-bar {
     position: relative;
     padding: 8px 10px;
@@ -43,9 +54,9 @@
     z-index: 1;
 }
 .weui-search-bar__input {
-    height: @weuiSearchBarHeight;
+    /* height: @weuiSearchBarHeight;
     line-height: @weuiSearchBarHeight;
-    font-size: 14px;
+    font-size: 14px; */
 }
 .weui-icon-clear {
     position: absolute;
