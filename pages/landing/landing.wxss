@@ -16,13 +16,14 @@ page,
     text-align: center;
 }
 .weui-search-bar {
-    position: relative;
+    position: fixed;
     padding: 8px 10px;
     display: flex;
     box-sizing: border-box;
     background-color: #EFEFF4;
     border-top: 1rpx solid #D7D6DC;
     border-bottom: 1rpx solid #D7D6DC;
+    width: 100%;
 }
 .weui-icon-search {
     margin-right: 8px;
