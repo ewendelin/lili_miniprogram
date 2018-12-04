@@ -16,7 +16,7 @@ page,
     text-align: center;
 }
 .weui-search-bar {
-    position: fixed;
+    position: relative;
     padding: 8px 10px;
     display: flex;
     box-sizing: border-box;
