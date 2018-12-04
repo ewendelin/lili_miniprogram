@@ -1,2 +1,17 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="claims-h">  
+  my claims history
+</view>
+<view class="claims-container">
+  <view class="restaurant-card" bindtap='jumpToRestaurant'>
+    <view class="restaurant-avatars" style="background-image:url({{restaurant.image}}) ">
+    </view>
+    <view class="restaurant-info">
+      <view class='restaurant-info-content'>
+        <view class="restaurant-name">{{restaurant.name}}</view>
+        <view class="restaurant-cuisine">{{restaurant.cuisine}}</view>
+        <view class="restaurant-address">{{restaurant.address}}</view>
+      </view>
+    </view>
+  </view> 
+</view>

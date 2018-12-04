@@ -10,25 +10,25 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FF8616",
+    "navigationBarBackgroundColor": "#589F29",
     "navigationBarTitleText": "粒粒侠",
     "navigationBarTextStyle": "#FFF"
   },
   "tabBar": {
-    "backgroundColor": "#FFFFFE",
+    "backgroundColor": "#FFF",
     "borderStyle": "#D3D3D3",
-    "selectedColor": "#D03232",
+    "selectedColor": "#589F29",
     "color": "#131313",
     "list": [{
       "pagePath": "pages/landing/landing",
       "iconPath": "images/store.png",
       "selectedIconPath": "images/store-hover.png",
-      "text": ""
+      "text": "Shop"
     }, {
       "pagePath": "pages/profile/profile",
       "iconPath": "images/user.png",
       "selectedIconPath": "images/user-hover.png",
-      "text": ""
+      "text": "Profile"
     }]
   }
 }
