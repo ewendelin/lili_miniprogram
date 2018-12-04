@@ -19,9 +19,9 @@
   
 
     <map id="claim-map"
-        latitude="{{latitude}}"
-        longitude="{{longitude}}"
-        markers="{{markers}}"
+        latitude="{{mop.latitude}}"
+        longitude="{{mop.longitude}}"
+        markers="{{mop.markers}}"
         covers="{{covers}}"
         show-location>
     </map>

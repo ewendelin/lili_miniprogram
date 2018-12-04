@@ -41,8 +41,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    latitude: 23.099994,
-    longitude: 113.324520,
+    latitude: "",
+    longitude: "",
+    markers: [],
     claim: {},
     post: {},
     restaurant: {}
@@ -64,16 +65,31 @@ Page({
     method: 'GET',
     success(res){
       const data = res.data;
+      console.log(data)
       let claim = data.claim;
       let post = data.post;
       let restaurant = data.restaurant;
-
+      let latitude = data.restaurant.latitude;
+      let longitude = data.restaurant.longitude;
+      console.log(latitude)
+      console.log(longitude)
       page.setData({
         claim: claim,
         post: post, 
-        restaurant: restaurant
+        restaurant: restaurant,
+        'mop.latitude': latitude,
+        'mop.longitude': longitude,
+        'mop.markers': [{
+          latitude: latitude,
+          longitude: longitude,
+          iconPath: "/images/placeholder.svg",
+          name: "",
+          desc: ""
+        }],
+        'map.hasMarkers': true,
       });
     }});
+    
     
     // // Get api data
     // wx.request({
