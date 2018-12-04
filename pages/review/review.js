@@ -3,7 +3,8 @@ const AV = require('../../utils/av-weapp-min.js');
 Page({
   data: {
     array: ['★', '★★', '★★★', '★★★★', '★★★★★'],
-    rating: 3
+    rating: 3,
+    filePath:""
   },
 
   bindReviewChange: function (e) {
@@ -30,7 +31,8 @@ Page({
       restaurant_id: page.data.restaurantId,
       content: e.detail.value.content,
       nickname: currentUserInfo.nickName,
-      avatar_url: currentUserInfo.avatarUrl
+      avatar_url: currentUserInfo.avatarUrl,
+      image: page.data.remoteUrl
       // user_avatarurl: page.data.currentUserInfo.avatarUrl,
       // user_nickname: page.data.currentUserInfo.nickName
     }
@@ -56,7 +58,7 @@ Page({
         // wx.switchTab({
         //   url: `/users/show/show`
         // });
-        wx.navigateTo({
+        wx.redirectTo({
           url: `../restaurant/restaurant?post_id=${post_id}`
         })
       }
@@ -98,6 +100,7 @@ Page({
       sourceType: ['album', 'camera'],
       success: function (res) {
         let tempFilePath = res.tempFilePaths[0];
+        console.log(tempFilePath)
         page.setData({
           filePath: tempFilePath
         });

@@ -15,7 +15,8 @@ Page({
     reviews: [],
     latitude: "",
     longitude: "",
-    markers: []
+    markers: [],
+    array: ['★', '★★', '★★★', '★★★★', '★★★★★']
   },
 
   userRating: function () {
