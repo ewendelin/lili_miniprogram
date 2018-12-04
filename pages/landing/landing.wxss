@@ -86,6 +86,11 @@ page,
     white-space: nowrap;
 }
 
+.fix-map {
+  position: fixed;
+  z-index: 50;
+}
+
 .map-box {
   margin-top: @weuiSearchBarHeight;
 }
