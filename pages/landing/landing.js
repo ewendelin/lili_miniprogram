@@ -86,9 +86,9 @@ Page({
     // sliderLeft: -1
   },
   
-  onLoad: function (options) {
-    items: []
-  },
+  // onLoad: function (options) {
+  //   items: []
+  // },
   // navbar
   onLoad: function(options) {
     // var that = this;
@@ -107,7 +107,6 @@ Page({
         const data = res.data;
         let posts = data.posts
         posts = posts.map((post) => {
-          // post.new_price = (post.original_price * post.discount.toFixed(1)).toFixed(0)
           post.new_price = (post.original_price * post.discount).toFixed(0);
           return post
         });
@@ -121,7 +120,7 @@ Page({
             latitude: post.latitude
           }
         })
-        console.log(posts)
+        console.log(`posts: ${posts}`)
         page.setData({
           items: posts,
           markers: markers
