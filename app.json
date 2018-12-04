@@ -1,18 +1,31 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/show/show",
     "pages/logs/logs",
     "pages/landing/landing",
     "pages/restaurant/restaurant",
     "pages/review/review",
-    "pages/claim/claim"
+    "pages/claim/claim",
+    "pages/profile/profile"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FF8616",
     "navigationBarTitleText": "粒粒侠",
     "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFE",
+    "borderStyle": "#D3D3D3",
+    "selectedColor": "#D03232",
+    "color": "#131313",
+    "list": [{
+      "pagePath": "pages/landing/landing",
+      "text": "food"
+    }, {
+      "pagePath": "pages/profile/profile",
+      "text": "me"
+    }]
   }
 }
   

@@ -62,6 +62,7 @@
 //   }
 // })
 let app = getApp();
+// var sliderWidth = 96;
 Page({
   data: {
     inputShowed: false,
@@ -78,15 +79,27 @@ Page({
       width: 30,
       height: 30,
     }],
-    post: {}
+    post: {},
+    // tabs: ["选项一", "选项二", "选项三"],
+    // activeIndex: 1,
+    // sliderOffset: 1,
+    // sliderLeft: -1
   },
   
-  // onLoad: function (options) {
-  //   items: []
-  // },
-
+  onLoad: function (options) {
+    items: []
+  },
+  // navbar
   onLoad: function(options) {
-
+    // var that = this;
+    // wx.getSystemInfo({
+    //   success: function (res) {
+    //     that.setData({
+    //       sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+    //       sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+    //     });
+    //   }
+    // });
     let page = this
     wx.request({
       url: `${app.globalData.serverUrl}api/v1/posts`,
@@ -115,7 +128,7 @@ Page({
         })
       }
     })
-    // insert next code here
+
   },
 
   markertap: function(e){
@@ -218,6 +231,13 @@ Page({
       }
     })
   },
+// navbar 
+  // tabClick: function (e) {
+  //   this.setData({
+  //     sliderOffset: e.currentTarget.offsetLeft,
+  //     activeIndex: e.currentTarget.id
+  //   });
+  // },
 
   onReady: function(e) {
     let page = this
