@@ -1,3 +1,5 @@
+const app = getApp()
+const AV = require('../../utils/av-weapp-min.js');
 Page({
   data: {
     array: ['★', '★★', '★★★', '★★★★', '★★★★★'],
@@ -58,6 +60,31 @@ Page({
     this.setData({
       restaurantId: options.restaurant_id
       // restaurant: app.globalData.pupForReview
+    });
+  },
+
+  takePhoto: function () {
+    var page = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePath = res.tempFilePaths[0];
+        page.setData({
+          filePath: tempFilePath
+        });
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(function (file) {
+          console.log(file.url())
+          page.setData({
+            remoteUrl: file.url()
+          })
+        }).catch("error is " + console.error);
+      }
     });
   },
 
