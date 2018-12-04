@@ -81,12 +81,10 @@
   border-radius: 3px;
   margin-top:10px;
   border-top: 0.5px solid rgb(235, 234, 234);
-  border-bottom: 0.5px solid rgb(235, 234, 234);
   margin-bottom: 5px;
 }
 
 .create-review-btn {
-  margin: 10px;
   width: 85vw;
   height: 40px;
   background-color: #FFCA39;
@@ -130,7 +128,9 @@
 }
 .star-rating {
 margin-left:100px;
-top:70px;
+color:#f8b500;
+font-size:25px;
+font-weight:bolder;
 }
 
 .review-content {
