@@ -17,10 +17,7 @@
   margin-bottom:10px;
   margin-top:15px;
 }
-.star-rating {
-  width: 80vw;
-  margin-bottom: 3px;
-}
+
 .restaurant-cuisine {
   width: 80vw;
   font-size: 14px;
@@ -132,8 +129,7 @@
 
 }
 .star-rating {
-text-align:right;
-position:absolute;
+margin-left:100px;
 top:70px;
 }
 
