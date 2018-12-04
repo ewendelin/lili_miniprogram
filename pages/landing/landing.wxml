@@ -47,8 +47,6 @@
   
   
   <view>
-
-    <view class='fix-map'>
     <view class='map-box showmap'>
       <map 
       scale="14"
@@ -78,10 +76,9 @@
         </cover-view>
       </map>
     </view>
-    
-  </view>
-  
+      
     <view class='fixed-box' wx:if="{{showMap}}"></view>  
+    
     <view>
       <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
       <view class="call-to-action">
