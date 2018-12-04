@@ -6,11 +6,11 @@
   <view class="restaurant-name">
     {{restaurant.name}}
   </view> 
-  <view class="star-rating">
+  <!-- <view class="star-rating"> -->
     <!-- <view class="{{restaurant.rating}}">
     
     </view> -->
-  </view>
+  <!-- </view> -->
   <view class="restaurant-cuisine">
     {{restaurant.cuisine}}
   </view> 
@@ -35,28 +35,24 @@
 </view>
 
 
-  <view class="reviews">
-    <view class="review-title">
-      Reviews
-    </view>
-
+<view class="reviews">
+  <view class="review-title">
+    Reviews
+  </view>
   <view wx:for="{{reviews}}" wx:for-item="review">
     <view class="user-review-card">
-      
+      <view class="av-name">
+        <view class="user-avatar" style="background-image:url({{review.avatar_url}})"></view>
+        <view class="user-name">{{review.nickname}}</view>
         <view class='star-rating'>{{review.rating}}</view>
-
-        <view class="av-name">
-          <view class="user-avatar" style="background-image:url({{review.avatar_url}})"></view>
-          <view class="user-name">{{review.nickname}}</view>
-        </view>
-        <view class="user-input">
-          <view class="review-content">{{review.content}}</view>
-          <!-- <view class="user-pic">{{review.photos}}</view> -->
-        </view>
       </view>
+      <view class="user-input">
+        <view class="review-content">{{review.content}}</view>
+        <view class="user-pic"><image src="{{review.image}}"></image></view>
     </view>
-    
+   </view>
   </view>
+</view>
 
 
 
