@@ -128,6 +128,8 @@
   height: 50px;
   border: 1px solid black;
   display: inline-block;
+  background-size:cover;
+
 }
 .star-rating {
 text-align:right;
