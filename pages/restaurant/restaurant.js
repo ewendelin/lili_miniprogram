@@ -152,10 +152,11 @@ Page({
     wx.setStorageSync('userId', userId);
     let post_id = wx.getStorageSync('post_id')
     let currentUserInfo = wx.getStorageSync('currentUserInfo');
-    
-    wx.navigateTo({
-      url: `../review/review?post_id=${post_id}&restaurant_id=${restaurant_id}&userId=${userId}&currentUserInfo=${currentUserInfo}`,
-    })
+    if (e.detail.userInfo != undefined){
+      wx.navigateTo({
+        url: `../review/review?post_id=${post_id}&restaurant_id=${restaurant_id}&userId=${userId}&currentUserInfo=${currentUserInfo}`,
+      })
+    }
   },
   /**
    * Lifecycle function--Called when page show

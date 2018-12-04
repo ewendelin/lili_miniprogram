@@ -1,47 +1,45 @@
 <view class="review-container">
-<view class="add-review">Create a review</view>
-<view class="form-fields">
+  <view class="add-review">Create a review</view>
+  <view class="form-fields">
     <form bindsubmit="userInput" bindreset="formReset">
       <view class="your-review">
         Write a review  
       </view>
       <input class="desc" name="content" placeholder="Great initiative to join 粒粒侠"/>
-    <view class="section">
-      <picker bindchange="bindPickerChange" value="1" range="{{array}}">
-        <view class="picker">
-          <view class="your-rating">
-            Rating, tap to select
-          </view> 
-          <view class='star'>{{array[rating - 1]}}</view>
-        </view>
-      </picker>
-    </view>
-    <view class="btn-submit">
-      <button class='btn' form-type="submit" loading="{{loading}}">
-        <view class="btn-text">Send</view>
-      </button>
-    </view>
-  </picker>
-</view>
-<!-- add image begin -->
-<view class ="input-name">Image</view>
-  <view class="user-input">
-    <view class="text-area-wrap-image">
-    <image class ="add-image" src="/images/addpicture.png" bindtap='takePhoto'></image>
-      <block wx:if="{{image == ''}}">
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="1" range="{{array}}">
+          <view class="picker">
+            <view class="your-rating">
+              Rating, tap to select
+            </view> 
+            <view class='star'>{{array[rating - 1]}}</view>
+          </view>
+        </picker>
+      </view>
+      <view class="btn-submit">
+        <button class='btn' form-type="submit" loading="{{loading}}">
+          <view class="btn-text">Send</view>
+        </button>
+      </view>
+      <!-- add image begin -->
+      <view class ="input-name">Image</view>
+      <view class="user-input">
+        <view class="text-area-wrap-image">
         <image class ="add-image" src="/images/addpicture.png" bindtap='takePhoto'></image>
-        </block>
-        <block wx:if="{{image != ''}}">
-        <image class ="add-image" src="{{filePath}}" bindtap='takePhoto'></image>
-        </block>
-    </view>
+          <block wx:if="{{image == ''}}">
+            <image class ="add-image" src="/images/addpicture.png" bindtap='takePhoto'></image>
+            </block>
+            <block wx:if="{{image != ''}}">
+            <image class ="add-image" src="{{filePath}}" bindtap='takePhoto'></image>
+            </block>
+        </view>
+      </view>
+      <!-- add image end -->
+      <view class="btn-submit">
+        <button class='btn' form-type="submit" loading="{{loading}}">
+          <view class="btn-text">Send</view>
+        </button>
+      </view>
+    </form>
   </view>
-<!-- add image end -->
-  <view class="btn-submit">
-    <button class='btn' form-type="submit" loading="{{loading}}">
-      <view class="btn-text">Send</view>
-    </button>
-  </view>
-  </form>
-</view>
 </view>
