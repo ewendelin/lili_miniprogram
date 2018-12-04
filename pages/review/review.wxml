@@ -21,6 +21,27 @@
         <view class="btn-text">Send</view>
       </button>
     </view>
+  </picker>
+</view>
+<!-- add image begin -->
+<view class ="input-name">Image</view>
+  <view class="user-input">
+    <view class="text-area-wrap-image">
+    <image class ="add-image" src="/images/addpicture.png" bindtap='takePhoto'></image>
+      <block wx:if="{{image == ''}}">
+        <image class ="add-image" src="/images/addpicture.png" bindtap='takePhoto'></image>
+        </block>
+        <block wx:if="{{image != ''}}">
+        <image class ="add-image" src="{{filePath}}" bindtap='takePhoto'></image>
+        </block>
+    </view>
+  </view>
+<!-- add image end -->
+  <view class="btn-submit">
+    <button class='btn' form-type="submit" loading="{{loading}}">
+      <view class="btn-text">Send</view>
+    </button>
+  </view>
   </form>
 </view>
 </view>

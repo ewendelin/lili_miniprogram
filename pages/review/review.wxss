@@ -90,3 +90,19 @@ btn-submit {
 align-content: center;
 text-shadow: 1px 1px black;
 }
+/* add photo begin */
+.text-area-wrap-image {
+background-color:#fff;
+margin-top:8px;
+height:100px;
+}
+
+.input-name {
+  font-size: 16px;
+  margin-top:10px;
+}
+
+.add-image {
+width:90px;
+height:90px;
+}
