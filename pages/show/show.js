@@ -14,7 +14,6 @@ Page({
     let page = this;
     wx.navigateTo({
       url: `../restaurant/restaurant?post_id=${page.data.post.id}&restaurant_id=${page.data.restaurant.id}`
-      
     });
   },
   jumpToClaim(e) {
@@ -73,7 +72,18 @@ Page({
     // Save reference to page
     let page = this;
     let post_id = options.id;
-
+    let user = wx.getStorageSync('currentUserInfo')
+    let userInfo;
+    if (Object.keys(user).includes('avatar_url')) {
+      userInfo = true;
+      console.log(true)
+    } else {
+      userInfo = false
+      console.log(false)
+    }
+    page.setData({
+      userInfo: userInfo
+    })
     console.log(`global data on show: ${app.globalData.userId}`);
 
     // Get api data

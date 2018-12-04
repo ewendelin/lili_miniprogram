@@ -46,8 +46,8 @@
         <view class='star-rating'>{{review.rating}}</view>
 
         <view class="av-name">
-          <view class="user-avatar" src="">{{review.userInfo.avatarUrl}}</view>
-          <view class="user-name">{{review.userInfo.nickName}}</view>
+          <view class="user-avatar" src="">{{review.avatar_url}}</view>
+          <view class="user-name">{{review.nickname}}</view>
         </view>
         <view class="user-input">
           <view class="review-content">{{review.content}}</view>

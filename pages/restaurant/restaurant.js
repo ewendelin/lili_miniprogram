@@ -163,7 +163,6 @@ Page({
    */
   onShow: function (e) {
     // load reviews
-    wx.setStorageSync('options',options)
   },
 
   /**

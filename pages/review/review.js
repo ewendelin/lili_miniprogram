@@ -19,6 +19,9 @@ Page({
     // console.log(app.globalData.userId);
     let post_id = page.data.postId;
     let restaurant_id = page.data.restaurantId;
+    let currentUserInfo = wx.getStorageSync('currentUserInfo');
+    console.log(currentUserInfo['avatarUrl'])
+    
 
     let reviewData = {
       user_id: page.data.userId,
@@ -26,6 +29,8 @@ Page({
       rating: page.data.rating,
       restaurant_id: page.data.restaurantId,
       content: e.detail.value.content,
+      nickname: currentUserInfo.nickName,
+      avatar_url: currentUserInfo.avatarUrl
       // user_avatarurl: page.data.currentUserInfo.avatarUrl,
       // user_nickname: page.data.currentUserInfo.nickName
     }
