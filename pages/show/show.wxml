@@ -39,5 +39,9 @@
 </view>
 
 
-
-<button class="weui-btn" open-type="getUserInfo" bindgetuserinfo='jumpToClaim'>Claim it!</button> 
+<block wx:if="{{userInfo}}">
+  <button class="weui-btn" open-type="getUserInfo" bindgetuserinfo='jumpToClaim'>Claim it!</button>
+</block>
+<block wx:else>
+  <button class="weui-btn" open-type="getUserInfo" bindgetuserinfo='jumpToClaim'>Claim it!</button> 
+</block>
