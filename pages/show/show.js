@@ -41,25 +41,26 @@ Page({
 
     let userId = app.globalData.userId;
     console.log(`click btn: ${userId}`);
+    if (e.detail.userInfo != undefined) {
+      wx.request({
+        url: `${app.globalData.serverUrl}api/v1/posts/${post_id}/claims?user_id=${userId}`, //仅为示例，并非真实的接口地址,
+        method: 'POST',
+        data: claimData,
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success(res) {
+          console.log(`res: ${res.data}`)
+          wx.setStorageSync('res', res);
+          // wx.navigateBack({
+          // })
 
-    wx.request({
-      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}/claims?user_id=${userId}`, //仅为示例，并非真实的接口地址,
-      method: 'POST',
-      data: claimData,
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        console.log(`res: ${res.data}`)
-        wx.setStorageSync('res', res);
-        // wx.navigateBack({
-        // })
-
-        wx.navigateTo({
-          url: `../claim/claim?id=${res.data.claim.id}&post_id=${res.data.claim.post_id}`
-        });
-      }
-    })
+          wx.navigateTo({
+            url: `../claim/claim?id=${res.data.claim.id}&post_id=${res.data.claim.post_id}`
+          });
+        }
+      })
+    }
   },
 
   /**
