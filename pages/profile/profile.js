@@ -1,5 +1,6 @@
 // pages/profile/profile.js
 let app = getApp();
+
 Page({
 
   deleteItem: function (e) {
@@ -39,14 +40,24 @@ Page({
    * Page initial data
    */
   data: {
-
+    claims: {}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    let user_id = wx.getStorageSync('userId');
+    wx.request({
+      url: `${app.globalData.serverUrl}api/v1/my_claims?user_id=${user_id}`,
+      success: (res) => {
+        const data = res.data;
+        const my_claims = data.my_claims;
+        this.setData({
+          claims: my_claims
+        })
+      }
+    });
   },
 
   /**
