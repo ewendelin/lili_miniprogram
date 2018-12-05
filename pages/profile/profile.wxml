@@ -1,6 +1,6 @@
 <!--pages/profile/profile.wxml-->
 <view class="claims-h">  
-  my claims history
+  My claims history
 </view>
 <view class="claims-container">
   <view class="claim-card">
@@ -10,11 +10,20 @@
       <view class='restaurant-info-content'>
         <view class="restaurant-name">Wagas{{restaurant.name}}</view>
         <view class="created-at">October 5th 20:26{{}}</view>
+        <view style="display: flex; justify-content: space-between; width: 100%">
+          <view class="dish">Salad{{}}</view>
+          <view class="price">¥11{{}}</view>
+          <button class="cancel-btn" data-itemid="{{item.id}}" bindtap="deleteItem" style="position: absolute; right: 50px">
+            <view class="btn-text">Cancel</view>
+          </button>
+        </view>
       </view>
-      <view class="below-info">
-        <view class="dish">Salad{{}}</view>
-        <view class="price">¥11{{}}</view>
+      <view class="below-info" style="display: flex; width: 100%">
+
       </view>
     </view>
+        <view class ="buttonbox">
+
+        </view>
   </view> 
 </view>

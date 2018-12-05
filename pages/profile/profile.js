@@ -1,6 +1,40 @@
 // pages/profile/profile.js
+let app = getApp();
 Page({
 
+  deleteItem: function (e) {
+    const data = e.currentTarget.dataset;
+    const itemid = data.itemid;
+    const page = this
+    console.log(data);
+
+    wx.showModal({
+      title: 'CANCEL',
+      content: 'Are you sure?',
+      success: function (res) {
+        if (res.confirm) {
+          // var page = 
+          wx.request({
+            url: `${app.globalData.serverUrl}/api/v1/items/${itemid}?access_token=${app.globalData.access_token}`, //仅为示例，并非真实的接口地址,
+            method: 'DELETE',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success(res) {
+              console.log(res.data)
+              page.getData()
+              // page.setData({
+              //   items: res.data.items
+              // })
+
+            }
+          })
+        } else if (res.cancel) {
+          console.log('User clicks cancel')
+        }
+      }
+    })
+  },
   /**
    * Page initial data
    */
