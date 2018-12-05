@@ -5,7 +5,7 @@
 
 
 <view class="claims-container">
-  <view wx:for="{{claims}}" wx:for-item="claim" class="claim-card">
+  <view wx:for="{{claims}}" wx:for-item="claim" class="claim-card" style="position:relative">
   <!-- <view class="claim-card"> -->
     <!-- <view class="restaurant-avatars" style="background-image:url({{restaurant.image}}) ">
     </view> -->
@@ -13,13 +13,16 @@
       <view class='restaurant-info-content'>
         <view class="restaurant-name">{{claim.restaurant}}</view>
         <view class="created-at">{{claim.claimed_at}}</view>
-        <view style="display: flex; justify-content: space-between; width: 100%">
-          <view class="dish">{{claim.dish}}</view>
-          <view class="price">¥{{claim.price}}</view>
-          <button class="cancel-btn" data-claimid="{{claim.id}}" data-postid="{{claim.post.id}}" bindtap="deleteItem" style="position: absolute; right: 50px">
-            <view class="btn-text">Cancel</view>
-          </button>
+        <view class="hr"></view>
+        <view style="display: flex; justify-content: space-between; width:73vw ">
+          <view class="dish" style="word-wrap: nowrap;">{{claim.dish}}</view>
+          <view style="border-bottom: 1px solid gray"></view>
+          <view class="price" style="">¥{{claim.price}}</view>
         </view>
+          
+          <view class="cancel-btn" data-claimid="{{claim.id}}" data-postid="{{claim.post.id}}" bindtap="deleteItem" style="position: absolute; top:10px; right: 10px;">
+            <view class="btn-text">🗑</view>
+          </view>
       </view>
       <view class="below-info" style="display: flex; width: 100%">
 
