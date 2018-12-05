@@ -16,7 +16,7 @@
         <view style="display: flex; justify-content: space-between; width: 100%">
           <view class="dish">{{claim.dish}}</view>
           <view class="price">¥{{claim.price}}</view>
-          <button class="cancel-btn" data-itemid="{{item.id}}" bindtap="deleteItem" style="position: absolute; right: 50px">
+          <button class="cancel-btn" data-claimid="{{claim.id}}" data-postid="{{claim.post.id}}" bindtap="deleteItem" style="position: absolute; right: 50px">
             <view class="btn-text">Cancel</view>
           </button>
         </view>
