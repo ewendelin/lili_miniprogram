@@ -222,6 +222,7 @@ Page({
           restaurant: data.restaurant
         });
         page.startCount();
+        console.log(data.restaurant)
       }
     });
   },
