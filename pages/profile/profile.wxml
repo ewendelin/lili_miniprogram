@@ -1,6 +1,6 @@
 <!--pages/profile/profile.wxml-->
 <view class="claims-h">  
-  My claims history
+  My claims
 </view>
 <view class="claims-container">
   <view class="claim-card">

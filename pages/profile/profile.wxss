@@ -5,12 +5,11 @@
   align-items: center;
 }
 .claims-h {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   font-size: 30px;
   margin: 20px;
   font-weight: bold;
-  color: #FFC642;
+  color: rgb(255, 196, 0);
   margin-bottom: 15px;
 }
 
