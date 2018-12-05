@@ -19,6 +19,7 @@
     position: relative;
     padding: 8px 10px;
     display: flex;
+    align-items:center;
     box-sizing: border-box;
     background-color: #EFEFF4;
     border-top: 1rpx solid #D7D6DC;
@@ -51,6 +52,7 @@
     padding-left: 30px;
     padding-right: 30px;
     width: 100%;
+    font-size: 16px;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -93,7 +95,12 @@
 .map-icon {
   height: 25px;
   width: 25px;
+  margin-left: 10px;
 }
+
+/* .map-icon-text {
+  font-size: 12px;
+} */
 
 .show-map-btn {
   margin: 10px;

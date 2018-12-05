@@ -23,7 +23,7 @@
       <view class="weui-search-bar__form">
           <view class="weui-search-bar__box">
               <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-              <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+              <input type="text" class="weui-search-bar__input" placeholder="Search" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
               <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
                   <icon type="clear" size="14"></icon>
               </view>
@@ -35,6 +35,9 @@
       </view>
       <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">Go</view>
       <!-- add map button -->
+      
+      <image class='map-icon' src='/images/map-show.png' bindtap="toggleMap"></image>
+      <!-- <text class='map-icon-text'>Map</text> -->
       
       <!-- /add map button -->
     </view>
@@ -83,7 +86,7 @@
     <view class='fixed-box' wx:if="{{showMap}}"></view>  
     
     <view>
-      <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
+      <!-- <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view> -->
       <view class="call-to-action">
         <view class="quote">
           have a scroll and find some food to save tonight
