@@ -7,7 +7,8 @@ Page({
    */
   data: {
     post: {},
-    restaurant: {}
+    restaurant: {},
+    serverUrl: app.globalData.serverUrl.substr(0, app.globalData.serverUrl.length - 1)
   },
 
   jumpToRestaurant(e) {
@@ -208,12 +209,13 @@ Page({
   },
   getData: function (page, post_id) {
     wx.request({
-      url: `${app.globalData.serverUrl}/api/v1/posts/${post_id}`,
+      url: `${app.globalData.serverUrl}api/v1/posts/${post_id}`,
       method: 'GET',
       success(res) {
         const data = res.data;
         let post = data.post       
         post.new_price = (post.original_price * post.discount).toFixed(0)
+        post.image_url = page.data.serverUrl+post.image.url
         // Update local data
         page.setData({
           post: post,

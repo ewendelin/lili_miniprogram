@@ -4,7 +4,7 @@
       <view class="page__desc">搜索栏</view>
   </view> -->
   <view class="page_bd">
-  <!-- <view class="weui-tab">
+    <!-- <view class="weui-tab">
           <view class="weui-navbar">
               <block wx:for="{{tabs}}" wx:key="*this">
                   <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
@@ -18,30 +18,36 @@
               <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
               <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
           </view>
-      </view> -->
-      <view class="weui-search-bar">
-          <view class="weui-search-bar__form">
-              <view class="weui-search-bar__box">
-                  <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                  <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
-                  <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-                      <icon type="clear" size="14"></icon>
-                  </view>
+    </view> -->
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="Search" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+              <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                  <icon type="clear" size="14"></icon>
               </view>
-              <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
-                  <icon class="weui-icon-search" type="search" size="14"></icon>
-                  <view class="weui-search-bar__text">Search</view>
-              </label>
           </view>
-          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">Go</view>
+          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">Search</view>
+          </label>
       </view>
-      <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
-          <navigator url="" class="weui-cell" hover-class="weui-cell_active">
-              <view class="weui-cell__bd">
-                  <view>实时搜索文本</view>
-              </view>
-          </navigator>
-      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">Go</view>
+      <!-- add map button -->
+      
+      <image class='map-icon' src='/images/map-show.png' bindtap="toggleMap"></image>
+      <!-- <text class='map-icon-text'>Map</text> -->
+      
+      <!-- /add map button -->
+    </view>
+    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">
+              <view>实时搜索文本</view>
+          </view>
+      </navigator>
+    </view>
   </view>
 
   
@@ -80,7 +86,7 @@
     <view class='fixed-box' wx:if="{{showMap}}"></view>  
     
     <view>
-      <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view>
+      <!-- <view class="show-map-btn" bindtap="toggleMap">{{showMapBtn}}</view> -->
       <view class="call-to-action">
         <view class="quote">
           have a scroll and find some food to save tonight
@@ -88,7 +94,7 @@
       </view>
 
       <view class="cards-menu">
-        <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), url({{ item.image.url }});" data-item="{{item}}">
+        <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" bindtap="showItem" class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), url({{ serverUrl+item.image.url }});" data-item="{{item}}">
           <!-- <view class="top-avatar">
             <image class="top-avatars" src="/images/avata-dog.png">
             </image>
