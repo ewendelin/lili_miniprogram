@@ -12,7 +12,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#589F29",
     "navigationBarTitleText": "粒粒侠",
-    "navigationBarTextStyle": "#FFF"
+    "navigationBarTextStyle": "#FFF",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "backgroundColor": "#FFF",

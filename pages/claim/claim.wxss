@@ -20,7 +20,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(253, 253, 253);
 }
 .claim-title {
   width: 80vw;
