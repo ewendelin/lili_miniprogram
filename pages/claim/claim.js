@@ -41,6 +41,12 @@ Page({
     })
   },
 
+  goLanding: function(e) {
+    wx.reLaunch({
+      url: '../landing/landing',
+    })
+  },
+
   /**
    * 页面的初始数据
    */

@@ -1,4 +1,4 @@
-<view class='respic' style="background-image:url({{restaurant.image}})"></view>
+<view class='respic' style="background-image:url({{ serverUrl+restaurant.image.url }})"></view>
 
 <!-- <image class="respic" src="{{restaurant.image}}"> -->
 <!-- </image> -->

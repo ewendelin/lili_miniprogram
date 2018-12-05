@@ -121,7 +121,7 @@ Page({
             latitude: post.latitude
           }
         })
-        console.log(`posts: ${posts}`)
+        console.log(posts)
         page.setData({
           items: posts,
           markers: markers
