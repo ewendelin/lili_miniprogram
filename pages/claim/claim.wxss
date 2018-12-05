@@ -5,6 +5,8 @@
   height:240px;
   background-repeat:no-repeat;
   background-size:cover;
+  margin:0 auto;
+
 }
 
 /* .claim-food {
@@ -12,6 +14,8 @@
   object-fit: cover;
 } */
 .text-container {
+  width:300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,16 +49,34 @@
   font-weight: bold;
 }
 
+.btns {
+  display:flex;
+  flex-direction:column;
+}
+
 .weui-btn {
-  margin:30px;
-  width: 30vw;
-  background-color: #FFCA39;
+  margin-top:30px;
+  width: 300px;
+  /* padding:0 40px; */
   color:white;
   display: flex;
   justify-content: center;
   box-shadow: .5px .5px .5px .5px black;
 }
-.cancel {
+
+.weui-btn:last-child {
+  margin-bottom: 30px;
+}
+
+.btn-yellow {
+  background-color: #FFCA39;
+}
+
+.btn-green {
+  background-color: #589F29;
+}
+
+.btn-text {
   text-align: center;
   text-shadow: .5px .5px .5px .5px black;
 }
