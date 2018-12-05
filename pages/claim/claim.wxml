@@ -25,7 +25,7 @@
         covers="{{covers}}"
         show-location>
     </map>
-     <button class="weui-btn" data-itemid="{{item.id}}" bindtap="deleteItem">
+     <button class="weui-btn" data-claimid="{{claim.id}}" bindtap="deleteItem">
       <view class="cancel">Cancel</view>
     </button>
 </view>
