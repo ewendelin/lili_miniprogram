@@ -4,9 +4,11 @@ let app = getApp();
 Page({
 
   deleteItem: function (e) {
+    const page = this;
     const data = e.currentTarget.dataset;
-    const itemid = data.itemid;
-    const page = this
+    const claimid = data.claimid;
+    const postid = page.data.post.id;
+    
     console.log(data);
 
     wx.showModal({
@@ -16,18 +18,20 @@ Page({
         if (res.confirm) {
           // var page = 
           wx.request({
-            url: `${app.globalData.serverUrl}/api/v1/items/${itemid}?access_token=${app.globalData.access_token}`, //仅为示例，并非真实的接口地址,
+            url: `${app.globalData.serverUrl}api/v1/posts/${postid}/claims/${claimid}`, //仅为示例，并非真实的接口地址,
             method: 'DELETE',
             header: {
               'content-type': 'application/json' // 默认值
             },
             success(res) {
               console.log(res.data)
-              page.getData()
+              // page.getData()
               // page.setData({
               //   items: res.data.items
               // })
-
+              wx.navigateBack({
+                
+              })      
             }
           })
         } else if (res.cancel) {
