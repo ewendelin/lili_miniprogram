@@ -41,11 +41,7 @@
 //   },
 
 //   /**
-//    * Page event handler function--Called when user drop down
-//    */
-//   onPullDownRefresh: function () {
 
-//   },
 
 //   /**
 //    * Called when page reach bottom
@@ -129,6 +125,18 @@ Page({
       }
     })
 
+  },
+
+  //    * Page event handler function--Called when user drop down
+  //    */
+  onPullDownRefresh: function() {
+    console.log('refresh')
+    wx.showLoading({ title: 'Refreshing' })
+
+    setTimeout(function () {
+      wx.hideLoading()
+      // wx.stopPullDownRefresh()
+    }, 2000)
   },
 
   markertap: function(e){

@@ -11,7 +11,7 @@
     </view> -->
     <view class="claim-info">
       <view class='restaurant-info-content'>
-        <view class="restaurant-name">{{claim.restaurant}}</view>
+        <view class="restaurant-name">{{claim.restaurant.name}}</view>
         <view class="created-at">{{claim.claimed_at}}</view>
         <view class="hr"></view>
         <view style="display: flex; justify-content: space-between; width:73vw ">
