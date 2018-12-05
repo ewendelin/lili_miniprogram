@@ -18,7 +18,7 @@
     <image class="clock" src="https://image.flaticon.com/icons/svg/59/59252.svg">
     </image>
       <view class="time">
-        Clock {{clock}}
+        {{clockText}} {{clock}}
         <view class="time-table">
           Pickup between {{post.start_time}} - {{post.end_time}}
         </view>
