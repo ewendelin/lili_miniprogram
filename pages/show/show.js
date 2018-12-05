@@ -198,7 +198,7 @@ Page({
       this.countDown(time);
     } else {
       console.log('mwahahahahaha');
-      this.setData({ clockText: "Too bad. It's ovah! If you snooze. You LOSE.", clock: "" })
+      this.setData({ clockText: "Sorry, this promotion already finished!", clock: "" })
     }
 
 
