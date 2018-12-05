@@ -35,6 +35,16 @@ Page({
       }
     })
   },
+
+  jumpToRestaurant(e) {
+    let page = this;
+    const data = e.currentTarget.dataset;
+    let postid = data.postid;
+    let restaurantid = data.restaurantid;
+    wx.navigateTo({
+      url: `../restaurant/restaurant?post_id=${postid}&restaurant_id=${restaurantid}`
+    });
+  },
   /**
    * Page initial data
    */
