@@ -11,11 +11,17 @@
     </view> -->
     <view class="claim-info">
       <view class='restaurant-info-content'>
-        <view class="restaurant-name">{{claim.restaurant.name}}</view>
-        <view class="created-at">{{claim.claimed_at}}</view>
+
+        <view bindtap="jumpToRestaurant" data-postid="{{claim.post.id}}" data-restaurantid="{{claim.restaurant.id}}">
+          <view class="dish" style="word-wrap: nowrap;">{{claim.dish}}</view>
+          <view class="created-at">{{claim.claimed_at}}</view>
+          <view class="restaurant-name">{{claim.restaurant.name}}</view>
+        </view>
+
         <view class="hr"></view>
         <view style="display: flex; justify-content: space-between; width:73vw ">
-          <view class="dish" style="word-wrap: nowrap;">{{claim.dish}}</view>
+          <!-- <view class="dish" style="word-wrap: nowrap;">{{claim.dish}}</view> -->
+          <view class="total">Amount :</view>
           <view style="border-bottom: 1px solid gray"></view>
           <view class="price" style="">¥{{claim.price}}</view>
         </view>

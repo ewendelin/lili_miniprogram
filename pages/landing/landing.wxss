@@ -106,7 +106,7 @@
   margin: 10px;
   width: 95vw;
   height: 35px;
-  background-color: #FFC642;
+  background-color: #F7BF33;
   color: white;
   display: flex;
   justify-content: center;
@@ -126,7 +126,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
   font-size: 22px;
-  color: #FFC642;
+  color: #F7BF33;
   margin:0 auto;
   text-align: center;
 }
@@ -206,7 +206,7 @@
   width: 100%;
   height: 100px;
   background-color: #fff;
-  border: 1px solid gray;
+  border-bottom:1rpx solid #D7D6DC;
   display: flex;
   justify-content: space-between;
 }
@@ -246,11 +246,6 @@ height: 100px;
   color: #FF8616;
 }
 
-.cover-price {
-  font-size: 17px;
-  text-decoration: line-through;
-}
-
 .showmap {
   position: fixed;
   z-index: 90;
@@ -274,6 +269,6 @@ height: 100px;
   margin:10px;
   margin-bottom: 10px;
   font-size: 18px;
-  color: rgb(255, 188, 2);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  color: #F7BF33;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

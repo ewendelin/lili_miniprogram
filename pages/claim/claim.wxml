@@ -3,7 +3,7 @@
   <!-- <image src="https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif"></image> -->
   <!-- <image class="claim-food" src="{{post.image}}"></image> -->
 
-</view>
+
 
 <view style='background-color: rgb(253, 253, 253)'>
   <view class="text-container">

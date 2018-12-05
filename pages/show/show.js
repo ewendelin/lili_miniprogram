@@ -135,11 +135,11 @@ Page({
   },
   date_format: function (micro_second) {
     let second = Math.floor(micro_second / 1000);
-    let hr = Math.floor(second / 3600);
+    let hr = this.fillZero(Math.floor(second / 3600));
     let min = this.fillZero(Math.floor((second - hr * 3600) / 60));
     let sec = this.fillZero((second - hr * 3600 - min * 60));
     let micro_sec = this.fillZero(Math.floor((micro_second % 1000) / 10));
-    return min + ":" + sec
+    return hr+ ":" + min + ":" + sec
   },
   fillZero: function (num) {
     return num < 10 ? "0" + num : num
@@ -188,16 +188,17 @@ Page({
     console.log(current_total, start_total, end_total);
 
     if (current_total < start_total) {
-      console.log('or maybe...')
+      this.setData({clockText: "Starts in..."})
       var time = this.timeDif(current_total, start_total);
       this.countDown(time);
     } else if (current_total < end_total) {
+      this.setData({ clockText: "Ends in..." })
       console.log("am i here?!")
       var time = this.timeDif(current_total, end_total);
       this.countDown(time);
     } else {
       console.log('mwahahahahaha');
-      
+      this.setData({ clockText: "Too bad. It's ovah! If you snooze. You LOSE.", clock: "" })
     }
 
 
@@ -222,6 +223,7 @@ Page({
           restaurant: data.restaurant
         });
         page.startCount();
+        console.log(data.restaurant)
       }
     });
   },

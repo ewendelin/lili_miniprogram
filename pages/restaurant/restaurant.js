@@ -16,7 +16,8 @@ Page({
     latitude: "",
     longitude: "",
     markers: [],
-    array: ['★', '★★', '★★★', '★★★★', '★★★★★']
+    array: ['★', '★★', '★★★', '★★★★', '★★★★★'],
+    serverUrl: app.globalData.serverUrl.substr(0, app.globalData.serverUrl.length - 1)
   },
 
   userRating: function () {
