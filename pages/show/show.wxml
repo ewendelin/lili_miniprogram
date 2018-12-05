@@ -1,5 +1,5 @@
 <!--pages/show/show.wxml-->
-<view class="food-photo-container" style="background-image:url({{post.image}})">
+<view class="food-photo-container" style="background-image:url({{searUrl+post.image.url}})">
   <!-- <image class="food" src="{{ post.image }}"></image> -->
 </view>
 

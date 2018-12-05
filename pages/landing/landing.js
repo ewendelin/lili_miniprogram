@@ -70,6 +70,7 @@ Page({
     showMap: true,
     showMapBtn: "Hide Map",
     items: [],
+    serverUrl: app.globalData.serverUrl.substr(0, app.globalData.serverUrl.length - 1),
     showPanel:false,
     markers: [{
       iconPath: "/images/placeholder.svg",

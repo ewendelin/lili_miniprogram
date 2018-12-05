@@ -7,7 +7,8 @@ Page({
    */
   data: {
     post: {},
-    restaurant: {}
+    restaurant: {},
+    serverUrl: app.globalData.serverUrl.substr(0, app.globalData.serverUrl.length - 1)
   },
 
   jumpToRestaurant(e) {
