@@ -217,6 +217,8 @@ Page({
         let post = data.post       
         post.new_price = (post.original_price * post.discount).toFixed(0)
         post.image_url = page.data.serverUrl+post.image.url
+        let restaurant = data.restaurant
+        restaurant.image_url = page.data.serverUrl + restaurant.image.url
         // Update local data
         page.setData({
           post: post,

@@ -67,6 +67,7 @@ Page({
         const data = res.data;
         console.log(data)
         let restaurant = data.restaurant;
+        restaurant.image_url = page.data.serverUrl + restaurant.image.url
         console.log(restaurant)
         let posts = data.restaurant.posts;
         let latitude = data.restaurant.latitude;

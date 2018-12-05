@@ -25,7 +25,7 @@
   </view>   
 
   <view class="restaurant-card" bindtap='jumpToRestaurant'>
-    <view class="restaurant-avatars" style="background-image:url({{serverUrl+restaurant.image.url}}) ">
+    <view class="restaurant-avatars" style="background-image:url({{restaurant.image_url}}) ">
       <!-- <image class="restaurant-avatar" src="{{restaurant.image}}"></image> -->
     </view>
       <view class="restaurant-info">
