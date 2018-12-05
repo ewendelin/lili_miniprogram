@@ -2,17 +2,20 @@
 <view class="claims-h">  
   My claims history
 </view>
+
+
 <view class="claims-container">
-  <view class="claim-card">
+  <view wx:for="{{claims}}" wx:for-item="claim" class="claim-card">
+  <!-- <view class="claim-card"> -->
     <!-- <view class="restaurant-avatars" style="background-image:url({{restaurant.image}}) ">
     </view> -->
     <view class="claim-info">
       <view class='restaurant-info-content'>
-        <view class="restaurant-name">Wagas{{restaurant.name}}</view>
-        <view class="created-at">October 5th 20:26{{}}</view>
+        <view class="restaurant-name">{{claim.restaurant}}</view>
+        <view class="created-at">{{claim.claimed_at}}</view>
         <view style="display: flex; justify-content: space-between; width: 100%">
-          <view class="dish">Salad{{}}</view>
-          <view class="price">¥11{{}}</view>
+          <view class="dish">{{claim.dish}}</view>
+          <view class="price">¥{{claim.price}}</view>
           <button class="cancel-btn" data-itemid="{{item.id}}" bindtap="deleteItem" style="position: absolute; right: 50px">
             <view class="btn-text">Cancel</view>
           </button>
@@ -26,4 +29,4 @@
 
         </view>
   </view> 
-</view>
+</view> 
