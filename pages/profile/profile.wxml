@@ -3,14 +3,17 @@
   my claims history
 </view>
 <view class="claims-container">
-  <view class="restaurant-card" bindtap='jumpToRestaurant'>
-    <view class="restaurant-avatars" style="background-image:url({{restaurant.image}}) ">
-    </view>
-    <view class="restaurant-info">
+  <view class="claim-card">
+    <!-- <view class="restaurant-avatars" style="background-image:url({{restaurant.image}}) ">
+    </view> -->
+    <view class="claim-info">
       <view class='restaurant-info-content'>
-        <view class="restaurant-name">{{restaurant.name}}</view>
-        <view class="restaurant-cuisine">{{restaurant.cuisine}}</view>
-        <view class="restaurant-address">{{restaurant.address}}</view>
+        <view class="restaurant-name">Wagas{{restaurant.name}}</view>
+        <view class="created-at">October 5th 20:26{{}}</view>
+      </view>
+      <view class="below-info">
+        <view class="dish">Salad{{}}</view>
+        <view class="price">¥11{{}}</view>
       </view>
     </view>
   </view> 
