@@ -7,7 +7,7 @@
 .claims-h {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  font-size: 32px;
+  font-size: 30px;
   margin: 20px;
   font-weight: bold;
   color: #FFC642;
@@ -34,7 +34,7 @@
 .restaurant-info-content {
   max-width:90%;
   margin-left: 20px;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
 
 .restaurant-name {
@@ -51,6 +51,7 @@
 .below-info {
   max-width:90%;
   margin-left: 20px;
+  flex-direction: row;
 }
 
 .dish {
@@ -58,6 +59,7 @@
   margin-right: 15px;
   font-size: 14px;
   font-weight: bolder;
+  margin-top: 3px;
 }
 
 .price {
@@ -65,4 +67,28 @@
   color: #589F29;
   font-size: 16px;
   font-weight: bolder;
+  margin-right: 50px;
+  margin-top: 3px;
+}
+
+.cancel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 25px;
+  background-color: rgb(236, 0, 0);
+  border-radius: 3px;
+}
+.btn-text {
+  font-size: 14px;
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.buttonbox{
+  display:flex;
+  justify-content: center;
 }
