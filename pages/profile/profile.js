@@ -101,7 +101,11 @@ Page({
    * Page event handler function--Called when user drop down
    */
   onPullDownRefresh: function () {
-
+    wx.showNavigationBarLoading();
+    this.onLoad();
+    wx.hideNavigationBarLoading();
+    console.log('refresh');
+    wx.stopPullDownRefresh();
   },
 
   /**
