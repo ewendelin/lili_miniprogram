@@ -48,7 +48,7 @@
       </view>
       <view class="user-input">
         <view class="review-content">{{review.content}}</view>
-        <view class="user-pic"><image src="{{review.image}}"></image></view>
+        <view wx:if="{{review.image}}" class="user-pic"><image src="{{review.image}}"></image></view>
     </view>
    </view>
   </view>

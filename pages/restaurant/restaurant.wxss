@@ -120,13 +120,12 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  border: 1px solid black;
   display: inline-block;
   background-size:cover;
-
 }
 .star-rating {
-margin-left:100px;
+position: absolute;
+right: 35px;
 color:#f8b500;
 font-size:25px;
 font-weight:bolder;
