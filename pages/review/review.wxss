@@ -84,11 +84,11 @@ btn-submit {
   justify-content: space-around;
   display: flex;
   align-items: center;
-  box-shadow: .2px .2px .2px .2px gray;
+  box-shadow: .2px .2px .2px .2px gainsboro;
 }
 .btn-text {
 align-content: center;
-text-shadow: 1px 1px black;
+/* text-shadow: 1px 1px black; */
 }
 /* add photo begin */
 .text-area-wrap-image {

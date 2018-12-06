@@ -208,7 +208,7 @@
   background-color: #fff;
   border-bottom:1rpx solid #D7D6DC;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .marker-show {
@@ -227,9 +227,7 @@ height: 100px;
 }
 
 .cover-right {
-  position: relative;
-  right: 80px;
-  margin:auto 0;
+  margin:auto 10px;
 }
 
 .cover-name {
