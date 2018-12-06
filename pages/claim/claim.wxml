@@ -7,7 +7,7 @@
 
 <view style='background-color: rgb(253, 253, 253)'>
   <view class="text-container">
-    <view class="claim-title">thank you for your support</view>
+    <view class="claim-title">Thank you for your support!</view>
 
     <view class='claim-contents'>
       <view class="claim-content1">
@@ -30,7 +30,7 @@
 
       <view class='btns'>
         <button class="weui-btn btn-green" bindtap='goLanding'>
-          <view class='btn-text'>See more promotion</view>
+          <view class='btn-text'>See more promotions</view>
         </button>
 
         <button class="weui-btn btn-yellow" data-claimid="{{claim.id}}" bindtap="deleteItem">
